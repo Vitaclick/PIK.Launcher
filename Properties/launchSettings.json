@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PikCorrector": {
+      "commandName": "Project",
+      "commandLineArgs": "1"
+    }
+  }
+}
