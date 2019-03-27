@@ -5,55 +5,84 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml.Linq;
+using PIK.Launcher;
 using static System.Console;
 
 namespace PikCorrector
 {
   class Program
   {
-    static int index = 0;
-    static void Main(string[] args)
+    static ICollection<string> Promt(Menu menu, int verticalOffset)
     {
-      var process = new Process();
-
-      process.StartInfo.FileName = "cmd.exe";
-      process.StartInfo.CreateNoWindow = true;
-      process.StartInfo.RedirectStandardInput = true;
-      process.StartInfo.RedirectStandardOutput = true;
-      process.StartInfo.RedirectStandardError = true;
-      process.Start();
-      Console.OutputEncoding = Encoding.UTF8;
-      if (Debugger.IsAttached || args[0] == "-debug")
-        System.Console.WriteLine("Launcher is starting...");
-
-      var menu = new Menu(new string[] {
-        "Да",
-        "Нет",
-        "Отмена"
-      });
-
       var menuPainter = new MenuPainter(menu);
 
       bool done = false;
-
-      // Console.CursorVisible = false;
       do
       {
-        System.Console.WriteLine("Настроить Ревит?");
-        menuPainter.Paint(1, 3);
+        menuPainter.Paint(1, verticalOffset);
         var keyInfo = Console.ReadKey();
 
         switch (keyInfo.Key)
         {
           case ConsoleKey.UpArrow: menu.MoveUp(); break;
           case ConsoleKey.DownArrow: menu.MoveDown(); break;
+          case ConsoleKey.Spacebar: menu.Select(); break;
           case ConsoleKey.Enter: done = true; break;
         }
       }
       while (!done);
 
-      Console.ForegroundColor = ConsoleColor.Cyan;
-      System.Console.WriteLine("Выбранная опция: " + (menu.SelectedOption ?? "(nothing)"));
+      Debug.WriteLine("Выбранная(ые) опция: " + (string.Join(",", menu.SelectedItems) ?? "(nothing)"));
+
+      return menu.SelectedItems;
+    }
+    static void Main(string[] args)
+    {
+      Console.OutputEncoding = Encoding.UTF8;
+
+      var process = new Process();
+      process.StartInfo.FileName = "cmd.exe";
+      process.StartInfo.CreateNoWindow = true;
+      process.StartInfo.RedirectStandardInput = true;
+      process.StartInfo.RedirectStandardOutput = true;
+      process.StartInfo.RedirectStandardError = true;
+      process.Start();
+
+      // main menu
+      System.Console.WriteLine("Выберите опции (пробел). По завершению нажмите Enter");
+      var mainOptions = new Dictionary<string, Action> {
+        {"Плагины PIK", Configurations.InstallPik},
+        {"Assembler", Configurations.InstallAssembler},
+        {"WeAndRevit", Configurations.InstallWeAndRevit},
+        {"Очистить от всех плагинов", Configurations.ClearAllPlugins}
+      };
+
+      var menu = new Menu(mainOptions);
+      Promt(menu, 2);
+
+      var opts = menu.SelectedItems.Select(x => mainOptions[x]).ToList();
+      foreach (Action opt in opts)
+      {
+        if (opt == Configurations.InstallPik)
+        {
+          System.Console.WriteLine("\nОтключить плагины PIK:");
+          var pikList = new string[] {
+            "Other addins (Tesla, Ostec, ...)",
+            "RevitNameValidator",
+            "OkCommand",
+            "BimInspector.Revit",
+            "InspectorConfig",
+            "ChangeManager",
+            "FamilyManager",
+            "FamilyExplorer"
+          };
+
+          var pikMenu = new Menu(pikList);
+          var selection = Promt(pikMenu, mainOptions.Count + 4);
+          Configurations.InstallPik(selection.ToList(), selection.Contains(pikList.First()));
+        }
+        opt.DynamicInvoke();
+      }
 
       process.StandardInput.WriteLine("ipconfig");
       process.StandardInput.Flush();
@@ -61,84 +90,7 @@ namespace PikCorrector
       System.Console.WriteLine(process.StandardOutput.ReadToEnd());
       Console.ReadKey();
 
-
-
-
-      var userPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-      var pluginsConfigPaths = new List<string>() {
-        Path.Combine(userPath, @"Autodesk\Revit\Addins\2017\PIK\PIK_PluginConfig.xml"),
-        Path.Combine(userPath, @"Autodesk\Revit\Addins\2019\PIK\PIK_PluginConfig.xml")
-      };
-
-      var pluginsToRemove = new List<string>
-      {
-        //"ChangeManager",
-        "RevitNameValidator",
-        "OkCommand"
-      };
-
-      void removePlugin(XDocument doc, string keyValue)
-      {
-        doc.Descendants("PluginInfo")
-          .Where(x => x.Element("AssemblyName").Value == keyValue)
-          .Remove();
-      }
-
-      if (args.Length > 0)
-      {
-
-        if (args[0] == "1")
-        {
-          pluginsToRemove.AddRange(new List<string> {
-          //"FamilyManager",
-          //"FamilyExplorer",
-          "BimInspector.Revit",
-          "InspectorConfig"
-        });
-        }
-      }
-
-      foreach (var pluginsConfigPath in pluginsConfigPaths)
-      {
-        XDocument xmlDoc = XDocument.Load(pluginsConfigPath);
-
-        foreach (var r in pluginsToRemove)
-        {
-          removePlugin(xmlDoc, r);
-        }
-
-        xmlDoc.Save(pluginsConfigPath);
-
-      }
-
-      // delete unnesesery folders
-      var deleters = new List<string> {
-        @"C:\Autodesk\AutoCAD\Pik\Settings\Dll",
-        Path.Combine(userPath, @"Autodesk\Revit\Addins\2017\PIK\OtherAddins"),
-        Path.Combine(userPath, @"Autodesk\Revit\Addins\2019\PIK\OtherAddins"),
-        @"C:\ProgramData\Autodesk\ApplicationPlugins\VitroPlugin.bundle"
-      };
-
-      // add vitrocad folder
-      // if (userPath.Contains("malozyomovvv")){
-      //   deleters.Add("vitro path...");
-      // }
-
-      foreach (var path in deleters)
-      {
-        if (Directory.Exists(path))
-          try
-          {
-            Directory.Delete(path, true);
-          }
-          catch (Exception ex)
-          {
-            Debug.Write(ex.Message);
-          }
-      }
-
       process.WaitForExit();
-
     }
   }
 }

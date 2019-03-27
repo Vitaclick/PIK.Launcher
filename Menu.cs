@@ -12,11 +12,24 @@ namespace PikCorrector
   public class Menu
   {
     public IReadOnlyList<string> Items { get; }
+    public List<string> SelectedItems { get; set; } = new List<string>();
     public int SelectedIndex { get; private set; } = -1; // nothing selected
     public string SelectedOption => SelectedIndex != -1 ? Items[SelectedIndex] : null;
     public void MoveUp() => SelectedIndex = Math.Max(SelectedIndex - 1, 0);
     public void MoveDown() => SelectedIndex = Math.Min(SelectedIndex + 1, Items.Count - 1);
-    public Menu(IEnumerable<string> items)
+    public void Select()
+    {
+      var selection = Items[SelectedIndex];
+      if (!SelectedItems.Contains(selection))
+        SelectedItems.Add(selection);
+      else
+        SelectedItems.Remove(selection);
+    }
+    public Menu(Dictionary<string, Action> items)
+    {
+      Items = items.Keys.ToArray();
+    }
+    public Menu(string[] items)
     {
       Items = items.ToArray();
     }
@@ -37,7 +50,8 @@ namespace PikCorrector
         var color = menu.SelectedIndex == i ? ConsoleColor.Yellow : ConsoleColor.Gray;
 
         Console.ForegroundColor = color;
-        System.Console.WriteLine(menu.Items[i]);
+        var item = menu.Items[i];
+        System.Console.WriteLine(menu.SelectedItems.Contains(item) ? "[x] " : "[ ] " + menu.Items[i]);
       }
     }
   }
