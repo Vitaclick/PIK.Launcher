@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml.Linq;
+using Microsoft.Extensions.Configuration;
 using PIK.Launcher;
 using static System.Console;
 
@@ -39,6 +40,22 @@ namespace PikCorrector
     static void Main(string[] args)
     {
       Console.OutputEncoding = Encoding.UTF8;
+
+      var configFile = Environment.GetEnvironmentVariable("appdata")
+        + @"\PIK.Launcher\launcherSettings.json";
+      if (System.IO.File.Exists(configFile))
+      {
+        System.Console.WriteLine("Запустить с последними настройками?");
+        IConfiguration config = new ConfigurationBuilder()
+          .AddJsonFile(configFile, true, true)
+          .Build();
+        var c = config["name"];
+        System.Console.WriteLine(c);
+
+      }
+      else
+      {
+      }
 
       var process = new Process();
       process.StartInfo.FileName = "cmd.exe";
