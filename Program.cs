@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Xml.Linq;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using PIK.Launcher;
 using static System.Console;
 
@@ -13,6 +14,7 @@ namespace PikCorrector
 {
   class Program
   {
+    public static ConfigurationSettings configuration = new ConfigurationSettings();
     static ICollection<string> Promt(Menu menu, int verticalOffset)
     {
       var menuPainter = new MenuPainter(menu);
@@ -42,19 +44,16 @@ namespace PikCorrector
       Console.OutputEncoding = Encoding.UTF8;
 
       var configFile = Environment.GetEnvironmentVariable("appdata")
-        + @"\PIK.Launcher\launcherSettings.json";
+        + @"\launcherSettings.json";
       if (System.IO.File.Exists(configFile))
       {
         System.Console.WriteLine("Запустить с последними настройками?");
         IConfiguration config = new ConfigurationBuilder()
           .AddJsonFile(configFile, true, true)
           .Build();
-        var c = config["name"];
+        var c = config["Settings"];
         System.Console.WriteLine(c);
 
-      }
-      else
-      {
       }
 
       var process = new Process();
@@ -78,6 +77,12 @@ namespace PikCorrector
       Promt(menu, 2);
 
       var opts = menu.SelectedItems.Select(x => mainOptions[x]).ToList();
+      configuration.Settings.AddRange(menu.SelectedItems);
+
+      string json = JsonConvert.SerializeObject(configuration);
+
+      System.IO.File.WriteAllText(configFile, json);
+
       foreach (Action opt in opts)
       {
         if (opt == Configurations.InstallPik)
