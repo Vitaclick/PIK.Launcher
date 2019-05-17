@@ -14,46 +14,21 @@ namespace PikCorrector
 {
   class Program
   {
-    public static ConfigurationSettings configuration = new ConfigurationSettings();
-    static ICollection<string> Promt(Menu menu, int verticalOffset)
-    {
-      var menuPainter = new MenuPainter(menu);
-
-      bool done = false;
-      do
-      {
-        menuPainter.Paint(1, verticalOffset);
-        var keyInfo = Console.ReadKey();
-
-        switch (keyInfo.Key)
-        {
-          case ConsoleKey.UpArrow: menu.MoveUp(); break;
-          case ConsoleKey.DownArrow: menu.MoveDown(); break;
-          case ConsoleKey.Spacebar: menu.Select(); break;
-          case ConsoleKey.Enter: done = true; break;
-        }
-      }
-      while (!done);
-
-      Debug.WriteLine("Выбранная(ые) опция: " + (string.Join(",", menu.SelectedItems) ?? "(nothing)"));
-
-      return menu.SelectedItems;
-    }
     static void Main(string[] args)
     {
       Console.OutputEncoding = Encoding.UTF8;
 
-      var configFile = Environment.GetEnvironmentVariable("appdata")
-        + @"\launcherSettings.json";
-      if (System.IO.File.Exists(configFile))
-      {
-        System.Console.WriteLine("Запустить с последними настройками?");
-        IConfiguration config = new ConfigurationBuilder()
-          .AddJsonFile(configFile, true, true)
-          .Build();
-        var c = config["Settings"];
-        System.Console.WriteLine(c);
+      var settings = new Settings();
 
+      if (System.IO.File.Exists(settings.configFile))
+      {
+        System.Console.WriteLine("Найдены профили с настройками. Выберите один либо нажмите ESC для продолжения:");
+        var jsonSettings = JsonConvert.DeserializeObject<Configurations>(File.ReadAllText(settings.configFile));
+        Console.Clear();
+        foreach (var config in jsonSettings.configurations)
+        {
+          var result = settings.Install(config.name, config.args);
+        }
       }
 
       var process = new Process();
@@ -66,45 +41,52 @@ namespace PikCorrector
 
       // main menu
       System.Console.WriteLine("Выберите опции (пробел). По завершению нажмите Enter");
-      var mainOptions = new Dictionary<string, Action> {
-        {"Плагины PIK", Configurations.InstallPik},
-        {"Assembler", Configurations.InstallAssembler},
-        {"WeAndRevit", Configurations.InstallWeAndRevit},
-        {"Очистить от всех плагинов", Configurations.ClearAllPlugins}
-      };
 
+      var mainOptions = settings.operations;
       var menu = new Menu(mainOptions);
-      Promt(menu, 2);
+      menu.Promt(2);
 
       var opts = menu.SelectedItems.Select(x => mainOptions[x]).ToList();
-      configuration.Settings.AddRange(menu.SelectedItems);
+      settings.sessionConfigs.AddRange(menu.SelectedItems);
 
-      string json = JsonConvert.SerializeObject(configuration);
-
-      System.IO.File.WriteAllText(configFile, json);
-
-      foreach (Action opt in opts)
+      List<Config> configList = new List<Config>();
+      foreach (var item in menu.SelectedItems)
       {
-        if (opt == Configurations.InstallPik)
-        {
-          System.Console.WriteLine("\nОтключить плагины PIK:");
-          var pikList = new string[] {
-            "Other addins (Tesla, Ostec, ...)",
-            "RevitNameValidator",
-            "OkCommand",
-            "BimInspector.Revit",
-            "InspectorConfig",
-            "ChangeManager",
-            "FamilyManager",
-            "FamilyExplorer"
-          };
-
-          var pikMenu = new Menu(pikList);
-          var selection = Promt(pikMenu, mainOptions.Count + 4);
-          Configurations.InstallPik(selection.ToList(), selection.Contains(pikList.First()));
-        }
-        opt.DynamicInvoke();
+        var config = new Config();
+        config.name = item;
+        configList.Add(config);
       }
+      var sessionConfigurations = new Configurations()
+      {
+        profile = "1",
+        configurations = configList
+      };
+      string json = JsonConvert.SerializeObject(sessionConfigurations);
+
+      System.IO.File.WriteAllText(settings.configFile, json);
+
+      // foreach (var opt in opts)
+      // {
+      //   if (opt == Configurations.InstallPik)
+      //   {
+      //     System.Console.WriteLine("\nОтключить плагины PIK:");
+      //     var pikList = new string[] {
+      //       "Other addins (Tesla, Ostec, ...)",
+      //       "RevitNameValidator",
+      //       "OkCommand",
+      //       "BimInspector.Revit",
+      //       "InspectorConfig",
+      //       "ChangeManager",
+      //       "FamilyManager",
+      //       "FamilyExplorer"
+      //     };
+
+      //     var pikMenu = new Menu(pikList);
+      //     var selection = Promt(pikMenu, mainOptions.Count + 4);
+      //     Configurations.InstallPik(selection.ToList(), selection.Contains(pikList.First()));
+      //   }
+      //   opt.DynamicInvoke();
+      // }
 
       process.StandardInput.WriteLine("ipconfig");
       process.StandardInput.Flush();

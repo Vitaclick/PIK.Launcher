@@ -5,10 +5,12 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml.Linq;
+using static PIK.Launcher.Settings;
 
 namespace PikCorrector
 {
-  //  logic for selecting specific option
+
+  // logic for selecting specific option
   public class Menu
   {
     public IReadOnlyList<string> Items { get; }
@@ -25,13 +27,37 @@ namespace PikCorrector
       else
         SelectedItems.Remove(selection);
     }
-    public Menu(Dictionary<string, Action> items)
+    public Menu(Dictionary<string, ConfigHandler> items)
     {
       Items = items.Keys.ToArray();
     }
     public Menu(string[] items)
     {
       Items = items.ToArray();
+    }
+    public ICollection<string> Promt(int verticalOffset)
+    {
+      var menuPainter = new MenuPainter(this);
+
+      bool done = false;
+      do
+      {
+        menuPainter.Paint(1, verticalOffset);
+        var keyInfo = Console.ReadKey();
+
+        switch (keyInfo.Key)
+        {
+          case ConsoleKey.UpArrow: MoveUp(); break;
+          case ConsoleKey.DownArrow: MoveDown(); break;
+          case ConsoleKey.Spacebar: Select(); break;
+          case ConsoleKey.Enter: done = true; break;
+        }
+      }
+      while (!done);
+
+      Debug.WriteLine("Выбранная(ые) опция: " + (string.Join(",", SelectedItems) ?? "(nothing)"));
+
+      return SelectedItems;
     }
   }
   // drawing menu list
