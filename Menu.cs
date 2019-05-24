@@ -1,15 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Xml.Linq;
-using static PIK.Launcher.Settings;
 
-namespace PikCorrector
+namespace PIK.Launcher
 {
-
   // logic for selecting specific option
   public class Menu
   {
@@ -27,10 +22,10 @@ namespace PikCorrector
       else
         SelectedItems.Remove(selection);
     }
-    public Menu(Dictionary<string, ConfigHandler> items)
-    {
-      Items = items.Keys.ToArray();
-    }
+    //public Menu(Dictionary<string, Settings.ConfigHandler> items)
+    //{
+    //  Items = items.Keys.ToArray();
+    //}
     public Menu(string[] items)
     {
       Items = items.ToArray();
