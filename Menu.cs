@@ -30,7 +30,7 @@ namespace PIK.Launcher
     {
       Items = items.ToArray();
     }
-    public ICollection<string> Promt(int verticalOffset)
+    public ICollection<string> Prompt(int verticalOffset)
     {
       var menuPainter = new MenuPainter(this);
 
@@ -53,6 +53,22 @@ namespace PIK.Launcher
       Debug.WriteLine("Выбранная(ые) опция: " + (string.Join(",", SelectedItems) ?? "(nothing)"));
 
       return SelectedItems;
+    }
+
+    public static bool PromptYesNo(string message)
+    {
+      Console.Write($"{message} (y/n):");
+      do
+      {
+        var answer = Console.ReadLine();
+        switch (answer)
+        {
+          case "y":
+            return true;
+          case "n":
+            return false;
+        }
+      } while (true);
     }
   }
   // drawing menu list

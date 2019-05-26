@@ -4,6 +4,8 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using PIK.Launcher.Utils;
 using static System.Console;
 
@@ -20,14 +22,11 @@ namespace PIK.Launcher
     {
       configFile = Environment.GetEnvironmentVariable("appdata") + @"\launcherSettings.json";
 
-      if (Debugger.IsAttached)
-      {
-        configFile = "kek.json";
-      }
       userAppdataFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
       operations = new Dictionary<string, Action<List<dynamic>>>
       {
         {"InstallPik", InstallPik},
+        {"InstallAssembler", InstallAssembler }
       };
     }
 
@@ -41,15 +40,50 @@ namespace PIK.Launcher
         }
         operations[config.name].DynamicInvoke(config.args);
       }
+      WriteLine("Установка завершена. Нажмите что-нибудь чтобы выйти...");
+      ReadKey();
+      Environment.Exit(0);
+    }
+
+    public void Install(List<string> configs)
+    {
+      foreach (var config in configs)
+      {
+        if (!operations.ContainsKey(config))
+        {
+          throw new ArgumentException("Настройка не найдена");
+        }
+        operations[config](null);
+      }
+    }
+
+    public void SaveSettings()
+    {
+      Clear();
+      //WriteLine("Введите имя профиля:");
+      //var profileName = ReadLine();
+      var sessionConfigurations = new Configurations()
+      {
+        profile = "default",
+        configurations = sessionConfigs
+      };
+      string json = JsonConvert.SerializeObject(sessionConfigurations);
+
+      File.WriteAllText(configFile, json);
     }
 
     private void InstallPik(List<dynamic> args)
     {
-      var config = new Config() {name = "InstallPik"};
-      var excludedPlugins = new List<string>(){};
+      var config = new Config()
+      {
+        name = "InstallPik",
+        args = new List<dynamic>()
+      };
+      var excludedPlugins = new List<string>() { };
       bool removeOtherAddins = false;
       if (args == null)
       {
+        WriteLine("Выберите (пробел) для отдельного удаления плагинов ПИК:");
         var removablePlugins = new string[]
         {
           "RevitNameValidator",
@@ -61,12 +95,10 @@ namespace PIK.Launcher
           "FamilyExplorer"
         };
 
-        excludedPlugins = new Menu(removablePlugins).Promt(2)
+        excludedPlugins = new Menu(removablePlugins).Prompt(2)
           as List<string>;
-        WriteLine("\nУдалить другие плагины?");
-        removeOtherAddins = new Menu(new[] {"Да", "Нет"})
-                              .Promt(removablePlugins.Length + 5)
-                              .FirstOrDefault() == "Да";
+        removeOtherAddins = Menu.PromptYesNo("\nУдалить другие плагины?");
+
         // Adding arguments
         config.args = new List<dynamic>()
         {
@@ -77,28 +109,30 @@ namespace PIK.Launcher
       {
         foreach (var a in args)
         {
+          var t = a.GetType();
           switch (a)
           {
-            case string str:
-              excludedPlugins.Add(str);
-              break;
-            case List<string> lstStr:
-              excludedPlugins = lstStr;
+            case JArray lstStr:
+              var stri = lstStr.ToObject<List<string>>();
+              excludedPlugins = stri;
+              config.args.Add(stri);
               break;
             case bool b:
               removeOtherAddins = b;
+              config.args.Add(b);
               break;
           }
         }
       }
 
       sessionConfigs.Add(config);
-
-      // TODO: can throw an exception if file not found
+      
       var pluginsConfigPaths = new List<string>() {
         Path.Combine(userAppdataFolderPath, @"Autodesk\Revit\Addins\2017\PIK\PIK_PluginConfig.xml"),
         Path.Combine(userAppdataFolderPath, @"Autodesk\Revit\Addins\2019\PIK\PIK_PluginConfig.xml")
       };
+      if (Debugger.IsAttached)
+        pluginsConfigPaths = new List<string>() {"PIK_PluginConfig.xml"};
 
       void removePlugin(XDocument doc, string keyValue)
       {
@@ -107,16 +141,23 @@ namespace PIK.Launcher
           .Remove();
       }
 
-
       foreach (var pluginsConfigPath in pluginsConfigPaths)
       {
-        XDocument xmlDoc = XDocument.Load(pluginsConfigPath);
-        if (excludedPlugins != null)
-          foreach (string plugin in excludedPlugins)
-          {
-            removePlugin(xmlDoc, plugin);
-          }
-        xmlDoc.Save(pluginsConfigPath);
+        if (File.Exists(pluginsConfigPath))
+        {
+          XDocument xmlDoc = XDocument.Load(pluginsConfigPath);
+          if (excludedPlugins != null)
+            foreach (string plugin in excludedPlugins)
+            {
+              removePlugin(xmlDoc, plugin);
+            }
+          xmlDoc.Save(pluginsConfigPath);
+        }
+        else
+        {
+          // TODO: при работе в одной версии например 2017 может не быть 2019 .xml файла
+          throw new Exception("Конфигурационных файлов ПИК плагинов не существует");
+        }
       }
 
       if (removeOtherAddins)
@@ -129,6 +170,10 @@ namespace PIK.Launcher
             @"C:\Autodesk\AutoCAD\Pik\Settings\Dll"
           });
       }
+    }
+    private void InstallAssembler(List<object> args)
+    {
+      throw new NotImplementedException();
     }
   }
 }

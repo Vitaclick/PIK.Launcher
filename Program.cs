@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using Newtonsoft.Json;
 using static System.Console;
@@ -17,66 +19,63 @@ namespace PIK.Launcher
       var settings = new Settings();
 
       if (File.Exists(settings.configFile))
-      {
-        WriteLine("Найдены профили с настройками. Выберите один либо нажмите ESC для продолжения:");
-        var jsonSettings = JsonConvert.DeserializeObject<Configurations>(File.ReadAllText(settings.configFile));
+      { 
+        if (Menu.PromptYesNo("Найдены предыдущие настройки. Продложить с ними либо нажмите ESC для отмены."))
+        {
+          var jsonSettings = JsonConvert.DeserializeObject<Configurations>(File.ReadAllText(settings.configFile));
+          if (jsonSettings != null)
+          {
+            settings.Install(jsonSettings.configurations);
+          }
+        }
 
-
+          
         //foreach (var config in jsonSettings.configurations)
         //{
         //  var result = settings.Install(config.name, config.args);
         //  WriteLine($"Установка {config.name} ... " + (result == 100 ? "OK" : "ERROR"));
         //}
-        settings.Install(jsonSettings.configurations);
-        ReadKey();
+
+      }
+      else
+      {
+        File.WriteAllText(settings.configFile, string.Empty);
       }
 
-      var process = new Process
-      {
-        StartInfo = {
-          FileName = "cmd.exe",
-          CreateNoWindow = true,
-          RedirectStandardInput = true,
-          RedirectStandardOutput = true,
-          RedirectStandardError = true
-        }
-      };
-      process.Start();
+      //var process = new Process
+      //{
+      //  StartInfo = {
+      //    FileName = "cmd.exe",
+      //    CreateNoWindow = true,
+      //    RedirectStandardInput = true,
+      //    RedirectStandardOutput = true,
+      //    RedirectStandardError = true
+      //  }
+      //};
+      //process.Start();
 
       // main menu
       Clear();
       WriteLine("Выберите опции (пробел). По завершению нажмите Enter");
 
-      var mainOptions = settings.operations.Keys.ToArray();
-      var mainMenu = new Menu(mainOptions);
-      var selectedConfigs = mainMenu.Promt(2);
+      var mainMenu = new Menu(settings.operations.Keys.ToArray());
+      var selectedConfigs = mainMenu.Prompt(2).ToList();
 
-      var opts = selectedConfigs.Select(x => settings.operations[x]).ToList();
-      foreach (var opt in opts)
+      //var opts = selectedConfigs.Select(x => settings.operations[x]).ToList();
+      Clear();
+      settings.Install(selectedConfigs);
+      //foreach (var opt in opts)
+      //{
+      //  opt(null);
+      //}
+
+      if (Menu.PromptYesNo("Сохранить настройки?"))
       {
-        //opt.DynamicInvoke(null);
-        opt(null);
+        settings.SaveSettings();
       }
 
-      var sessionConfigurations = new Configurations()
-      {
-        profile = "1",
-        configurations = settings.sessionConfigs
-      };
-      string json = JsonConvert.SerializeObject(sessionConfigurations);
+      //process.WaitForExit();
 
-      File.WriteAllText(settings.configFile, json);
-
-
-
-
-      process.StandardInput.WriteLine("ipconfig");
-      process.StandardInput.Flush();
-      process.StandardInput.Close();
-      WriteLine(process.StandardOutput.ReadToEnd());
-      ReadKey();
-
-      process.WaitForExit();
     }
   }
 }

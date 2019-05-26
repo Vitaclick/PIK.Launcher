@@ -1,6 +1,131 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <PluginConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <RevitVersionDefault>2017</RevitVersionDefault>
   <Plugins>
+    <PluginInfo>
+      <Commands>
+        <CommandInfo>
+          <Id>51</Id>
+          <Code>R1.25</Code>
+          <Developer>zhekov_fi</Developer>
+          <Officer>purtovsy</Officer>
+          <NameRus>Сохранение*2D элементов вида</NameRus>
+          <NameEng>Saver</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <ToolTip>Test</ToolTip>
+          <HelpUrl>https://pikipedia.pik.ru/wiki/R1.25_%D0%A1%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5_2D_%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2_%D0%B2%D0%B8%D0%B4%D0%B0_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
+          <UserGroups />
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
+          <IsTest>true</IsTest>
+          <IsDisabled>true</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>30</TimeSavedOneStart>
+          <CreatedDate>2017-03-20T12:36:17.283</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+        <CommandInfo>
+          <Id>54</Id>
+          <Code>R1.27</Code>
+          <Developer>zhekov_fi</Developer>
+          <Officer>purtovsy</Officer>
+          <NameRus>Расстановка*2D элементов текущем виде</NameRus>
+          <NameEng>Insert</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <ToolTip>Test</ToolTip>
+          <HelpUrl>https://pikipedia.pik.ru/wiki/R1.27_%D0%A0%D0%B0%D1%81%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_2D_%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2_%D1%82%D0%B5%D0%BA%D1%83%D1%89%D0%B5%D0%BC_%D0%B2%D0%B8%D0%B4%D0%B5_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
+          <UserGroups />
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
+          <IsTest>true</IsTest>
+          <IsDisabled>true</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>30</TimeSavedOneStart>
+          <CreatedDate>2017-03-24T12:33:16.557</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+      </Commands>
+      <AssemblyName>Revit_2DSaver</AssemblyName>
+    </PluginInfo>
+    <PluginInfo>
+      <Commands>
+        <CommandInfo>
+          <Id>50</Id>
+          <Code>R1.24</Code>
+          <Developer>ostaninam</Developer>
+          <NameRus>Менеджер*групп</NameRus>
+          <NameEng>GroupEditor</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <ToolTip>Управление группами. Обрабатываются только видимые элементы. Для исключения элементов достаточно изолировать необходимые.</ToolTip>
+          <HelpUrl>https://pikipedia.pik.ru/wiki/R1.24_%D0%9C%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80_%D0%B3%D1%80%D1%83%D0%BF%D0%BF_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
+          <UserGroups />
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
+          <IsTest>false</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>60</TimeSavedOneStart>
+          <CreatedDate>2017-04-03T14:59:33.857</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+      </Commands>
+      <AssemblyName>Revit_GroupManager</AssemblyName>
+    </PluginInfo>
+    <PluginInfo>
+      <Commands>
+        <CommandInfo>
+          <Id>1</Id>
+          <Code>R1.01</Code>
+          <Developer>ostaninam</Developer>
+          <NameRus>Менеджер*листов</NameRus>
+          <NameEng>SheetComposition</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <ToolTip>Автоматическая раскладка спецификаций на листы.</ToolTip>
+          <HelpUrl>https://pikipedia.pik.ru/wiki/R1.01_%D0%9C%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80_%D0%BB%D0%B8%D1%81%D1%82%D0%BE%D0%B2_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
+          <UserGroups />
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
+          <IsTest>false</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>15</TimeSavedOneStart>
+          <Requirements>Шаблон</Requirements>
+          <CreatedDate>2017-02-28T15:07:44.32</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+        <CommandInfo>
+          <Id>13</Id>
+          <Code>R1.15</Code>
+          <Developer>ostaninam</Developer>
+          <NameRus>Обновление*листов</NameRus>
+          <NameEng>SheetCompositionRefresh</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <ToolTip>Обновление раскладки спецификаций на листы.</ToolTip>
+          <HelpUrl>https://pikipedia.pik.ru/wiki/R1.15_%D0%9E%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BB%D0%B8%D1%81%D1%82%D0%BE%D0%B2_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
+          <UserGroups />
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
+          <IsTest>false</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>30</TimeSavedOneStart>
+          <Requirements>Параметры</Requirements>
+          <CreatedDate>2017-03-13T16:33:26.047</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+      </Commands>
+      <AssemblyName>Revit_Sheet_Composition</AssemblyName>
+    </PluginInfo>
     <PluginInfo>
       <Commands>
         <CommandInfo>
@@ -16,6 +141,9 @@
           <UserGroups>
             <GroupName>BIM</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -40,6 +168,9 @@
           <ToolTip>Копирует параметр Уровень в параметр BS_Этаж. Требуется для сортировки спецификаций инженерами и конструкторами, а также для прочих расчетов. Для выноски на схемах, т.к. стандартный параметр мы не можем вынести в марку.</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.03_%D0%9F%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -60,6 +191,9 @@
           <ToolTip>Прописывает элементам модели номер той секции к которой они относятся</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.04_%D0%9F%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_%D1%81%D0%B5%D0%BA%D1%86%D0%B8%D0%B8</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -79,6 +213,9 @@
           <ToolTip>Обеспечивает стандартную подачу таблиц заполнения дверных и оконных проемов. Создает параметры и прописывает значения</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.17_%D0%9F%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_%D1%83%D1%80%D0%BE%D0%B2%D0%BD%D0%B8_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -104,6 +241,9 @@
           <ToolTip>Функция позволяет выделять элементы по выбранным пользователем параметрам, изолировать элементы по выбранным пользователем параметрам, имеет 2 режима - "И" и "ИЛИ".</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.05_%D0%A4%D0%B8%D0%BB%D1%8C%D1%82%D1%80_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -128,6 +268,9 @@
           <ToolTip>Группирует листы по комплектам для печати и экспорта, автоматически определяя форматку</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.06_%D0%9A%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82_%D0%BB%D0%B8%D1%81%D1%82%D0%BE%D0%B2_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -153,6 +296,9 @@
           <ToolTip>У всех выбранных элементов можно задать значение параметров, которые общие для всех них.</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.07_%D0%97%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%B0_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -185,6 +331,9 @@
             <GroupName>ВК</GroupName>
             <GroupName>ИРА</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -207,6 +356,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -236,6 +388,9 @@
             <GroupName>BIM</GroupName>
             <GroupName>ИРА</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -260,6 +415,9 @@
           <ToolTip>Вставка выноски с заданным текстом.</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.09_%D0%92%D1%8B%D0%BD%D0%BE%D1%81%D0%BA%D0%B0_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>khisyametdinovvt</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -287,10 +445,13 @@
           <UserGroups>
             <GroupName>BIM</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
-          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <AvailabilityWithoutDoc>true</AvailabilityWithoutDoc>
           <TimeSavedOneStart>30</TimeSavedOneStart>
           <CreatedDate>2017-02-14T16:53:16.653</CreatedDate>
           <RatingDate xsi:nil="true" />
@@ -311,6 +472,9 @@
           <ToolTip>Подрезает в видовой куб выбранные элементы, с возможностью задания размера видового куба. Появилась по дефолту в 2016 версии. Нам полезна в 2015 версии, и немного более функциональна чем стандартная в 2016й.</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.12_3D_%D0%BF%D0%BE%D0%B4%D1%80%D0%B5%D0%B7%D0%BA%D0%B0_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -340,6 +504,9 @@
             <GroupName>ОВ</GroupName>
             <GroupName>BIM</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -367,6 +534,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -389,6 +559,9 @@
             <GroupName>ОВ</GroupName>
             <GroupName>ВК</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -414,6 +587,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -440,6 +616,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -462,6 +641,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -484,6 +666,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -506,6 +691,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -527,6 +715,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -549,6 +740,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -571,6 +765,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -591,6 +788,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>khisyametdinovvt</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -612,6 +812,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>khisyametdinovvt</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -634,6 +837,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>khisyametdinovvt</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -655,6 +861,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>khisyametdinovvt</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -676,6 +885,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -697,6 +909,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -718,6 +933,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -738,6 +956,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>khisyametdinovvt</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -746,12 +967,40 @@
           <CreatedDate>2018-09-25T11:21:50.7174312+03:00</CreatedDate>
           <RatingDate xsi:nil="true" />
         </CommandInfo>
+        <CommandInfo>
+          <Id>224</Id>
+          <Code>R2.45</Code>
+          <Developer>KhisyametdinovVT</Developer>
+          <Officer>Tsivilevav</Officer>
+          <NameRus>Площадь и*номера ПОН</NameRus>
+          <NameEng>PonNumbering</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <LongDescription>Группировка помещений по Зоне=БКФН и Подзоне=ПОН #</LongDescription>
+          <ToolTip>Нумерация помещений ПОН</ToolTip>
+          <HelpUrl />
+          <UserGroups>
+            <GroupName>АР</GroupName>
+          </UserGroups>
+          <ErrorSubscribers>
+            <string>KhisyametdinovVT</string>
+          </ErrorSubscribers>
+          <IsTest>false</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>0</TimeSavedOneStart>
+          <CreatedDate>2018-10-01T12:07:01.6426138+03:00</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
       </Commands>
       <ExternalApp>
         <Name>Revit_Rooms</Name>
         <FullClassName>Revit_Rooms.ExternalApplication</FullClassName>
-        <Developer>ostaninam</Developer>
+        <Developer>KhisyametdinovVT</Developer>
         <Description>Добавляет комбобокс на ленту для именования помещений. Освобождение элементов модели под другим пользователем. Автоподсчет площадей. Запись всех типов элементов модели в базу. Отслеживание базовой точки документа. Просмторы ютуба.</Description>
+        <ErrorSubscribers>
+          <string>KhisyametdinovVT</string>
+        </ErrorSubscribers>
       </ExternalApp>
       <AssemblyName>Revit_Rooms</AssemblyName>
     </PluginInfo>
@@ -770,6 +1019,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -797,6 +1049,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -818,6 +1073,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -844,6 +1102,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -871,6 +1132,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -898,6 +1162,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -919,6 +1186,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>khisyametdinovvt</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -945,6 +1215,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhuravlevma</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -963,6 +1236,7 @@
           <Id>32</Id>
           <Code>R2.20</Code>
           <Developer>zhuravlevma</Developer>
+          <Officer />
           <NameRus>Параметры*элем.узлов</NameRus>
           <NameEng>DetailsComponentsParameters</NameEng>
           <HideButtonText>false</HideButtonText>
@@ -971,6 +1245,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhuravlevma</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -998,6 +1275,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1019,6 +1299,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1045,8 +1328,11 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>300</TimeSavedOneStart>
@@ -1063,7 +1349,7 @@
           <Id>36</Id>
           <Code>R4.01</Code>
           <Developer>serdjukovis</Developer>
-          <Officer>baymuratoviz</Officer>
+          <Officer>chikinva</Officer>
           <NameRus>Спецификация ИОС</NameRus>
           <NameEng>ParamsVKSetter</NameEng>
           <HideButtonText>false</HideButtonText>
@@ -1075,6 +1361,9 @@
             <GroupName>ЭС</GroupName>
             <GroupName>СС</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1105,6 +1394,9 @@
             <GroupName>ЭС</GroupName>
             <GroupName>СС</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1135,6 +1427,9 @@
             <GroupName>ЭС</GroupName>
             <GroupName>СС</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1160,6 +1455,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1181,6 +1479,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>khisyametdinovvt</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1204,6 +1505,9 @@
           <HideButtonText>false</HideButtonText>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.18_%D0%98%D0%BC%D0%BF%D0%BE%D1%80%D1%82_%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1221,8 +1525,11 @@
           <HideButtonText>false</HideButtonText>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.19_%D0%9E%D0%B1%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>15</TimeSavedOneStart>
@@ -1238,6 +1545,9 @@
           <HideButtonText>false</HideButtonText>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.20_%D0%91%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9_%D0%B2%D1%8B%D1%85%D0%BE%D0%B4_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1262,6 +1572,9 @@
           <ToolTip>Запись параметра KR_Материал = ЖБ в элементы, которые имеют материал в имени которого есть слово 'ЖЕЛЕЗОБЕТОН', иначе записывается значение - Не ЖБ.</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R2.21_KR_%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>khisyametdinovvt</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1269,6 +1582,26 @@
           <TimeSavedOneStart>30</TimeSavedOneStart>
           <Requirements>Общий параметр: KR_Материал.</Requirements>
           <CreatedDate>2017-02-17T10:10:49.257</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+        <CommandInfo>
+          <Id>235</Id>
+          <Code>R2.47</Code>
+          <Developer>KhisyametdinovVT</Developer>
+          <Officer>purtovsy</Officer>
+          <NameRus>KR_MaterialTest</NameRus>
+          <NameEng>KR_MaterialTest</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <UserGroups />
+          <ErrorSubscribers>
+            <string>KhisyametdinovVT</string>
+          </ErrorSubscribers>
+          <IsTest>true</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>0</TimeSavedOneStart>
+          <CreatedDate>2018-12-25T10:26:14.5665856+03:00</CreatedDate>
           <RatingDate xsi:nil="true" />
         </CommandInfo>
       </Commands>
@@ -1286,6 +1619,9 @@
           <ToolTip>Переименовывает виды, выбранные в диспетчере проекта, добавляя префикс/суффикс и делая замену символов по шаблону</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.22_%D0%9F%D0%B5%D1%80%D0%B5%D0%B8%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1309,6 +1645,9 @@
           <ToolTip>Выгрузить информацию в Slack.</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.28_%D0%92%D1%8B%D0%B3%D1%80%D1%83%D0%B7%D0%B8%D1%82%D1%8C_%D0%B2_Slack_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>zhuravlevma</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1333,6 +1672,9 @@
           <ToolTip>Копирует виды, выбранные в диспетчере проекта, добавляя префикс/суффикс или нумерацию</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.23_%D0%9A%D0%BE%D0%BF%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1361,6 +1703,9 @@
             <GroupName>ОВ</GroupName>
             <GroupName>ВК</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1384,6 +1729,9 @@
           <ToolTip>Пакетное применение (в т.ч. удаление) фильтров к выбранным видам</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.26_%D0%9F%D0%B0%D0%BA%D0%B5%D1%82%D0%BD%D0%BE%D0%B5_%D0%BD%D0%B0%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D0%B5_%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80%D0%BE%D0%B2_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1411,6 +1759,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1433,8 +1784,11 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -1456,6 +1810,9 @@
           <ToolTip>Построение секции</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.29_%D0%A0%D0%BE%D0%B1%D0%BE%D1%82_%D0%98%D0%A0%D0%90_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1475,6 +1832,9 @@
           <UserGroups>
             <GroupName>ИРА</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1503,6 +1863,9 @@
             <GroupName>ОВ</GroupName>
             <GroupName>ВК</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1527,6 +1890,9 @@
           <ToolTip>Данные пользователя</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.30_%D0%9F%D1%80%D0%BE%D1%84%D0%B8%D0%BB%D1%8C_%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8F_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1554,6 +1920,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1576,6 +1945,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1598,6 +1970,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1620,6 +1995,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1640,6 +2018,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1660,6 +2041,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1684,6 +2068,9 @@
           <ToolTip>Отправить скриншот с комментарием с Slack</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.31_%D0%A1%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_Slack_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>zhuravlevma</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1699,39 +2086,6 @@
     <PluginInfo>
       <Commands>
         <CommandInfo>
-          <Id>62</Id>
-          <Code>R3.07</Code>
-          <Developer>zhekov_fi</Developer>
-          <Officer>purtovsy</Officer>
-          <NameRus>Палитра*инструментов</NameRus>
-          <NameEng>ShowPalette</NameEng>
-          <HideButtonText>false</HideButtonText>
-          <ToolTip>Показать/спрятать палитру инструментов</ToolTip>
-          <HelpUrl>https://pikipedia.pik.ru/wiki/R3.07_%D0%9F%D0%B0%D0%BB%D0%B8%D1%82%D1%80%D0%B0_%D0%9A%D0%A0_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
-          <UserGroups>
-            <GroupName>КР</GroupName>
-          </UserGroups>
-          <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
-          <IsNoButton>false</IsNoButton>
-          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
-          <TimeSavedOneStart>10</TimeSavedOneStart>
-          <Requirements>MongoDB</Requirements>
-          <CreatedDate>2017-04-11T15:15:36.65</CreatedDate>
-          <RatingDate xsi:nil="true" />
-        </CommandInfo>
-      </Commands>
-      <ExternalApp>
-        <Name>Revit_KRPalette</Name>
-        <FullClassName>Revit_KRPalette.App</FullClassName>
-        <Developer>zhekov_fi</Developer>
-        <Description>Палитра КР семейств</Description>
-      </ExternalApp>
-      <AssemblyName>Revit_KRPalette</AssemblyName>
-    </PluginInfo>
-    <PluginInfo>
-      <Commands>
-        <CommandInfo>
           <Id>63</Id>
           <Code>R1.32</Code>
           <Developer>zhuravlevma</Developer>
@@ -1740,6 +2094,9 @@
           <HideButtonText>false</HideButtonText>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.32_%D0%AD%D0%BA%D1%81%D0%BF%D0%BE%D1%80%D1%82_DWF_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>zhuravlevma</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1765,31 +2122,15 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>15</TimeSavedOneStart>
           <CreatedDate>2017-04-13T10:59:34.407</CreatedDate>
-          <RatingDate xsi:nil="true" />
-        </CommandInfo>
-        <CommandInfo>
-          <Id>65</Id>
-          <Code>R1.34</Code>
-          <Developer>ostaninam</Developer>
-          <NameRus>Обновить*группу в базе</NameRus>
-          <NameEng>SyncGroupToDB</NameEng>
-          <HideButtonText>false</HideButtonText>
-          <HelpUrl>https://pikipedia.pik.ru/wiki/R1.34_%D0%9E%D0%B1%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C_%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D1%83_%D0%B2_%D0%B1%D0%B0%D0%B7%D0%B5_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
-          <UserGroups>
-            <GroupName>АР</GroupName>
-          </UserGroups>
-          <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
-          <IsNoButton>false</IsNoButton>
-          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
-          <TimeSavedOneStart>15</TimeSavedOneStart>
-          <CreatedDate>2017-04-18T11:48:28.303</CreatedDate>
           <RatingDate xsi:nil="true" />
         </CommandInfo>
       </Commands>
@@ -1811,8 +2152,11 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>10</TimeSavedOneStart>
@@ -1834,8 +2178,11 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>10</TimeSavedOneStart>
@@ -1856,8 +2203,11 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -1878,8 +2228,11 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -1900,6 +2253,9 @@
           <HideButtonText>false</HideButtonText>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.35_%D0%9E%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1927,6 +2283,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1954,6 +2313,9 @@
             <GroupName>ОВ</GroupName>
             <GroupName>ВК</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -1981,6 +2343,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2008,6 +2373,9 @@
             <GroupName>ОВ</GroupName>
             <GroupName>ВК</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2039,8 +2407,11 @@
             <GroupName>ЭС</GroupName>
             <GroupName>СС</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>15</TimeSavedOneStart>
@@ -2059,19 +2430,65 @@
           <Developer>ostaninam</Developer>
           <Officer>samoilov_an</Officer>
           <NameRus>Отверстия</NameRus>
-          <NameEng>Revit_ArchOpening</NameEng>
+          <NameEng>ArchOpening</NameEng>
           <HideButtonText>false</HideButtonText>
           <ToolTip>Обработка задания на отверстия</ToolTip>
           <HelpUrl>https://www.youtube.com/playlist?list=PLt37XQ7QFcFI9P-GFzSxzL3HyDvk05Bs0</HelpUrl>
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>15</TimeSavedOneStart>
           <CreatedDate>2017-04-27T16:42:04.763</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+        <CommandInfo>
+          <Id>238</Id>
+          <Code>R1.135</Code>
+          <Developer>ostaninam</Developer>
+          <Officer>samoilov_an</Officer>
+          <NameRus>Проверка*отверстий</NameRus>
+          <NameEng>IosOpening</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <UserGroups>
+            <GroupName>ОВ</GroupName>
+            <GroupName>ВК</GroupName>
+            <GroupName>ЭС</GroupName>
+            <GroupName>СС</GroupName>
+          </UserGroups>
+          <ErrorSubscribers />
+          <IsTest>false</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>0</TimeSavedOneStart>
+          <CreatedDate>2019-02-21T14:42:10.0388699+03:00</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+        <CommandInfo>
+          <Id>239</Id>
+          <Code>R1.136</Code>
+          <Developer>ostaninam</Developer>
+          <Officer>zarubinei</Officer>
+          <NameRus>Отверстия</NameRus>
+          <NameEng>KrOpening</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <UserGroups>
+            <GroupName>КР</GroupName>
+          </UserGroups>
+          <ErrorSubscribers />
+          <IsTest>false</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>0</TimeSavedOneStart>
+          <CreatedDate>2019-02-26T14:40:13.6942691+03:00</CreatedDate>
           <RatingDate xsi:nil="true" />
         </CommandInfo>
       </Commands>
@@ -2090,6 +2507,9 @@
           <ToolTip>Отзеркалить выноску</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.39_%D0%A0%D0%B0%D0%B7%D0%B2%D0%B5%D1%80%D0%BD%D1%83%D1%82%D1%8C_%D0%B2%D1%8B%D0%BD%D0%BE%D1%81%D0%BA%D1%83_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2118,6 +2538,9 @@
             <GroupName>АР</GroupName>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2143,6 +2566,9 @@
             <GroupName>ОВ</GroupName>
             <GroupName>ВК</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2160,11 +2586,15 @@
           <Id>80</Id>
           <Code>R1.42</Code>
           <Developer>zhuravlevma</Developer>
+          <Officer />
           <NameRus>Оси*2D/3D</NameRus>
           <NameEng>Grids2d</NameEng>
           <HideButtonText>false</HideButtonText>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.42_%D0%9E%D1%81%D0%B8_3D-2D_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>zhuravlevma</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2172,6 +2602,46 @@
           <TimeSavedOneStart>10</TimeSavedOneStart>
           <Requirements>нет</Requirements>
           <CreatedDate>2017-09-17T16:01:56.067</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+        <CommandInfo>
+          <Id>225</Id>
+          <Code>R1.127</Code>
+          <Developer>zhuravlevma</Developer>
+          <NameRus>Уровни 2д 3д</NameRus>
+          <NameEng>Levels2d</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <UserGroups />
+          <ErrorSubscribers>
+            <string>zhuravlevma</string>
+          </ErrorSubscribers>
+          <IsTest>false</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>0</TimeSavedOneStart>
+          <CreatedDate>2018-10-10T18:08:10.2001881+03:00</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+        <CommandInfo>
+          <Id>228</Id>
+          <Code>R6.01</Code>
+          <Developer>zhuravlevma</Developer>
+          <NameRus>Экспорт осей</NameRus>
+          <NameEng>GridExport</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <UserGroups>
+            <GroupName>BIM</GroupName>
+          </UserGroups>
+          <ErrorSubscribers>
+            <string>zhuravlevma</string>
+          </ErrorSubscribers>
+          <IsTest>false</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>0</TimeSavedOneStart>
+          <CreatedDate>2018-10-25T12:54:06.654814+03:00</CreatedDate>
           <RatingDate xsi:nil="true" />
         </CommandInfo>
       </Commands>
@@ -2188,6 +2658,9 @@
           <HideButtonText>false</HideButtonText>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.43_%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_2D_%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>zhuravlevma</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2213,6 +2686,9 @@
           <ToolTip>Пакетное добавление параметров</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.44_%D0%94%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C_%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D1%8B_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>zhuravlevma</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2238,6 +2714,9 @@
           <ToolTip>Менеджер типов флажков</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.45_%D0%A4%D0%BB%D0%B0%D0%B6%D0%BA%D0%B8_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>khisyametdinovvt</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2261,6 +2740,9 @@
           <HideButtonText>false</HideButtonText>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.46_%D0%9F%D0%B5%D1%80%D0%B5%D0%BD%D1%83%D0%BC%D0%B5%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C_%D0%BB%D0%B8%D1%81%D1%82%D1%8B_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>zhuravlevma</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2286,6 +2768,9 @@
           <ToolTip>Проверка выносок на пересечение</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.47_%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D1%82%D1%8C_%D0%B2%D1%8B%D0%BD%D0%BE%D1%81%D0%BA%D0%B8_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2315,6 +2800,9 @@
             <GroupName>КР</GroupName>
             <GroupName>ОВ</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ganzara</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2338,8 +2826,11 @@
           <HideButtonText>false</HideButtonText>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.51_%D0%9F%D1%80%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80_%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B9_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>zhuravlevma</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>30</TimeSavedOneStart>
@@ -2365,12 +2856,14 @@
           <UserGroups>
             <GroupName>ГП</GroupName>
             <GroupName>АР</GroupName>
-            <GroupName>КР</GroupName>
             <GroupName>ОВ</GroupName>
             <GroupName>ВК</GroupName>
             <GroupName>BIM</GroupName>
             <GroupName>ИРА</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ganzara</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2397,6 +2890,9 @@
             <GroupName>АР</GroupName>
             <GroupName>BIM</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhuravlevma</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2418,6 +2914,9 @@
             <GroupName>АР</GroupName>
             <GroupName>BIM</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhuravlevma</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2436,6 +2935,9 @@
           <HideButtonText>false</HideButtonText>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.54_%D0%A0%D0%B0%D0%B7%D0%BC%D0%B5%D1%80_%D1%81%D1%82%D0%B5%D0%BD_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>zhuravlevma</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2464,8 +2966,11 @@
             <GroupName>BIM</GroupName>
             <GroupName>ИРА</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhuravlevma</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -2492,6 +2997,9 @@
             <GroupName>ОВ</GroupName>
             <GroupName>ВК</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2518,8 +3026,11 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>khisyametdinovvt</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -2540,6 +3051,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>khisyametdinovvt</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2570,6 +3084,9 @@
             <GroupName>ЭС</GroupName>
             <GroupName>СС</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2598,6 +3115,9 @@
             <GroupName>АР</GroupName>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2625,6 +3145,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2652,8 +3175,11 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -2677,8 +3203,11 @@
           <ToolTip />
           <HelpUrl>https://pikipedia.pik.ru/wiki/R4.09_%D0%9E%D0%B4%D0%BD%D0%BE%D0%BB%D0%B8%D0%BD%D0%B5%D0%B9%D0%BA%D0%B0_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -2701,6 +3230,9 @@
           <ToolTip>Менеджер обозначений импорта САПР (CAD)</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.57_CAD_%D0%9C%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2725,6 +3257,9 @@
           <ToolTip>Функция позволяет делать копии указанных листов с различными настройками</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.58_%D0%94%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0%D1%82%D0%BE%D1%80_%D0%BB%D0%B8%D1%81%D1%82%D0%BE%D0%B2_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2745,6 +3280,9 @@
           <ToolTip>Плагин позволяет раcкопировать выбранные виды, легенды и спецификации на указанные листы с сохранением положения</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.107_%D0%9A%D0%BE%D0%BF%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C_%D0%BD%D0%B0_%D0%BB%D0%B8%D1%81%D1%82%D1%8B_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2770,8 +3308,11 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -2797,6 +3338,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2823,6 +3367,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2847,6 +3394,9 @@
           <ToolTip>Вставка специального семейства в системный ноль проекта</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.59_%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%BD%D1%8B%D0%B9_%D0%BD%D0%BE%D0%BB%D1%8C_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2872,8 +3422,11 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -2892,8 +3445,11 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -2912,8 +3468,11 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -2932,8 +3491,11 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -2946,6 +3508,9 @@
         <FullClassName>Revit_CutLinesPlacer.App</FullClassName>
         <Developer>zhekov_fi</Developer>
         <Description>Добавляет на ленту Изменить-&gt;Вид кнопку  Показать вид привязанный к линии.</Description>
+        <ErrorSubscribers>
+          <string>zhekov_fi</string>
+        </ErrorSubscribers>
       </ExternalApp>
       <AssemblyName>Revit_CutLinesPlacer</AssemblyName>
     </PluginInfo>
@@ -2963,6 +3528,9 @@
           <ToolTip>Общие настройки для различных функций быстрой простановки размеров</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.62_%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80%D0%BE%D0%B2_%D0%B2_%D0%BF%D0%BB%D0%B0%D0%BD%D0%B5_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -2981,6 +3549,9 @@
           <ToolTip>Простановка размеров только по стенам в плане вдоль указанной линии</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.71_%D0%A0%D0%B0%D0%B7%D0%BC%D0%B5%D1%80%D1%8B_%D1%81%D1%82%D0%B5%D0%BD_%D0%BF%D0%BE_%D0%BB%D0%B8%D0%BD%D0%B8%D0%B8_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3000,6 +3571,9 @@
           <ToolTip>Простановка размеров вдоль линии с учётом настроенной конфигурации</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.72_%D0%A0%D0%B0%D0%B7%D0%BC%D0%B5%D1%80%D1%8B_%D0%BF%D0%BE_%D0%BB%D0%B8%D0%BD%D0%B8%D0%B8_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3018,6 +3592,9 @@
           <ToolTip>Плагин простановки наружных размеров на плане (учитывает стены и оси) согласно сохраненной конфигурации</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.74_%D0%9D%D0%B0%D1%80%D1%83%D0%B6%D0%BD%D1%8B%D0%B5_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80%D1%8B_%D0%BD%D0%B0_%D0%BF%D0%BB%D0%B0%D0%BD%D0%B5_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3035,6 +3612,9 @@
           <HideButtonText>false</HideButtonText>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.80_%D0%92%D0%BD%D1%83%D1%82%D1%80%D0%B5%D0%BD%D0%BD%D0%B8%D0%B5_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80%D1%8B_%D0%BD%D0%B0_%D0%BF%D0%BB%D0%B0%D0%BD%D0%B5_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3054,6 +3634,9 @@
           <ToolTip>Простановка размеров толщин по центру стены и габаритов колонн</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.82_%D0%A0%D0%B0%D0%B7%D0%BC%D0%B5%D1%80%D1%8B_%D0%BD%D0%B0_%D0%BF%D0%BB%D0%B0%D0%BD%D0%B5._%D0%9A%D0%A0_%D1%81%D1%82_%D0%9F_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3068,6 +3651,9 @@
         <FullClassName>Revit_PlanDimensions.Commands.PlanDimensionsApplication</FullClassName>
         <Developer>pekshevaa</Developer>
         <Description>Создает Updater для отслеживания изменений размеров.</Description>
+        <ErrorSubscribers>
+          <string>pekshevaa</string>
+        </ErrorSubscribers>
       </ExternalApp>
       <AssemblyName>Revit_PlanDimensions</AssemblyName>
     </PluginInfo>
@@ -3088,6 +3674,9 @@
             <GroupName>ОВ</GroupName>
             <GroupName>ВК</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3115,8 +3704,11 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -3143,6 +3735,9 @@
             <GroupName>ОВ</GroupName>
             <GroupName>ВК</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3171,6 +3766,9 @@
             <GroupName>ОВ</GroupName>
             <GroupName>ВК</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3193,6 +3791,9 @@
           <HideButtonText>false</HideButtonText>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.67_%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%82%D1%8C_%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B5_%D0%BD%D0%B0%D0%B1%D0%BE%D1%80%D1%8B_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>zhuravlevma</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3205,12 +3806,16 @@
         <CommandInfo>
           <Id>128</Id>
           <Code>R1.68</Code>
-          <Developer>zhuravlevma</Developer>
+          <Developer>serdjukovis</Developer>
+          <Officer>ugodinva</Officer>
           <NameRus>Обновить рабочие наборы</NameRus>
           <NameEng>UpdateWorksets</NameEng>
           <HideButtonText>false</HideButtonText>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.68_%D0%9E%D0%B1%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C_%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B5_%D0%BD%D0%B0%D0%B1%D0%BE%D1%80%D1%8B_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3221,6 +3826,15 @@
           <RatingDate xsi:nil="true" />
         </CommandInfo>
       </Commands>
+      <ExternalApp>
+        <Name>WorksetTool</Name>
+        <FullClassName>WorksetTool.Application.App</FullClassName>
+        <Developer>serdjukovis</Developer>
+        <Description>предлагает обновить рабочие наборы при закрытии документа</Description>
+        <ErrorSubscribers>
+          <string>serdjukovis</string>
+        </ErrorSubscribers>
+      </ExternalApp>
       <AssemblyName>WorksetTool</AssemblyName>
     </PluginInfo>
     <PluginInfo>
@@ -3239,8 +3853,11 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ganzara</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -3263,8 +3880,11 @@
           <ToolTip>Создание ключевой спецификации из файла Excel XLSX.</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.69_%D0%9A%D0%BB%D1%8E%D1%87._%D1%81%D0%BF%D0%B5%D1%86._%D0%B8%D0%B7_XLSX_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>zhuravlevma</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -3289,6 +3909,9 @@
           <UserGroups>
             <GroupName>BIM</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3316,6 +3939,9 @@
           <UserGroups>
             <GroupName>ЭС</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3343,6 +3969,9 @@
           <UserGroups>
             <GroupName>ОВ</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3365,6 +3994,9 @@
           <UserGroups>
             <GroupName>ОВ</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>Serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3394,6 +4026,9 @@
             <GroupName>ВК</GroupName>
             <GroupName>ЭС</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3419,6 +4054,9 @@
           <UserGroups>
             <GroupName>BIM</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3442,6 +4080,9 @@
           <ToolTip>Пакетное копировани параметров</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.76_%D0%9A%D0%BE%D0%BF%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%BE%D0%B2_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3466,6 +4107,9 @@
           <ToolTip>Поиск значений в таблицах</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.77_%D0%9D%D0%B0%D0%B9%D1%82%D0%B8_%D0%B2_%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B5_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3489,6 +4133,9 @@
           <LongDescription>Отдлека заполняется из каталога квартир</LongDescription>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R2.35_%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0_%D0%BE%D1%82%D0%B4%D0%B5%D0%BB%D0%BA%D0%B8_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3512,6 +4159,9 @@
           <ToolTip>Замена групп, заканчивающихся числом, на исходную группу (которая не заканчивается число)</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.78_%D0%97%D0%B0%D0%BC%D0%B5%D0%BD%D0%B0_%D0%B3%D1%80%D1%83%D0%BF%D0%BF_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3535,6 +4185,9 @@
           <ToolTip>Копирование легенд и чертежных видов из одного документа в другой</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.79_%D0%9A%D0%BE%D0%BF%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C_%D1%87%D0%B5%D1%80%D1%82%D1%91%D0%B6%D0%BD%D1%8B%D0%B5_%D0%B2%D0%B8%D0%B4%D1%8B_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>zhuravlevma</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3561,6 +4214,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ganzara</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3583,6 +4239,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ganzara</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3608,6 +4267,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3637,6 +4299,9 @@
             <GroupName>ВК</GroupName>
             <GroupName>BIM</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3665,8 +4330,11 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ganzara</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -3693,6 +4361,9 @@
             <GroupName>ОВ</GroupName>
             <GroupName>ВК</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3715,6 +4386,9 @@
           <HideButtonText>false</HideButtonText>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.84_%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3740,8 +4414,11 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -3760,8 +4437,11 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -3784,6 +4464,9 @@
           <ToolTip>Экспортирует в IKR проект</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R3.24_%D0%AD%D0%BA%D1%81%D0%BF%D0%BE%D1%80%D1%82_%D0%B2_IKR_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>ganzara</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3816,6 +4499,9 @@
             <GroupName>BIM</GroupName>
             <GroupName>ИРА</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3847,6 +4533,9 @@
             <GroupName>ВК</GroupName>
             <GroupName>BIM</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3872,6 +4561,9 @@
           <UserGroups>
             <GroupName>ИРА</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3904,6 +4596,9 @@
             <GroupName>СС</GroupName>
             <GroupName>BIM</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3936,6 +4631,9 @@
             <GroupName>ЭС</GroupName>
             <GroupName>СС</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3960,6 +4658,9 @@
           <ToolTip>Импортирует и отстраивает модели предварительно выгруженную в IKR</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R3.23_%D0%98%D0%BC%D0%BF%D0%BE%D1%80%D1%82_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8_%D0%B8%D0%B7_IKR_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>ganzara</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -3985,8 +4686,11 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -4005,6 +4709,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4025,6 +4732,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4051,8 +4761,11 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ganzara</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -4078,6 +4791,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ganzara</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4101,6 +4817,9 @@
           <HideButtonText>false</HideButtonText>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.94_OkCommand_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4125,6 +4844,9 @@
           <ToolTip>Плагин позволяет отрисовывать листы из Excel в чертежном виде Revit</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.95_%D0%98%D0%BC%D0%BF%D0%BE%D1%80%D1%82_%D0%B8%D0%B7_Excel_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4149,6 +4871,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>Serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4172,6 +4897,9 @@
           <ToolTip>Экспорт групп в отдельные файлы в указанную папку</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.97_%D0%AD%D0%BA%D1%81%D0%BF%D0%BE%D1%80%D1%82_%D0%B3%D1%80%D1%83%D0%BF%D0%BF_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4190,6 +4918,9 @@
           <ToolTip>Импорт ранее сохраненных групп из папки</ToolTip>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R1.98_%D0%98%D0%BC%D0%BF%D0%BE%D1%80%D1%82_%D0%B3%D1%80%D1%83%D0%BF%D0%BF_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4217,8 +4948,11 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ganzara</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -4246,6 +4980,9 @@
             <GroupName>ОВ</GroupName>
             <GroupName>ВК</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>Serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4269,6 +5006,9 @@
             <GroupName>ОВ</GroupName>
             <GroupName>ВК</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>Serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4296,8 +5036,11 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ganzara</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -4323,6 +5066,9 @@
           <UserGroups>
             <GroupName>ОВ</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>Serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4356,6 +5102,9 @@
             <GroupName>СС</GroupName>
             <GroupName>BIM</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4386,6 +5135,9 @@
             <GroupName>ЭС</GroupName>
             <GroupName>СС</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4413,6 +5165,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4435,6 +5190,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4458,8 +5216,11 @@
           <HideButtonText>false</HideButtonText>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R4.20_%D0%A1%D1%85%D0%B5%D0%BC%D0%B0_%D0%BD%D0%B0_%D0%B2%D0%B8%D0%B4%D0%B5_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>Serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -4476,8 +5237,11 @@
           <HideButtonText>false</HideButtonText>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R4.21_%D0%A1%D1%85%D0%B5%D0%BC%D0%B0_%D0%BD%D0%B0_%D0%BB%D0%B8%D1%81%D1%82%D0%B5_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>Serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -4503,6 +5267,9 @@
           <UserGroups>
             <GroupName>ОВ</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>Serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4531,8 +5298,11 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -4552,8 +5322,11 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -4585,6 +5358,9 @@
             <GroupName>BIM</GroupName>
             <GroupName>ИРА</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>Serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>true</IsNoButton>
@@ -4599,6 +5375,7 @@
         <FullClassName>Revit_NavisViewCreator.NavisViewCreatorApp</FullClassName>
         <Developer>serdjukovis</Developer>
         <Description>При синхронизации создает вид Navisworks и заполняет отчет в файле на сервере.</Description>
+        <ErrorSubscribers />
       </ExternalApp>
       <AssemblyName>Revit_NavisViewCreator</AssemblyName>
     </PluginInfo>
@@ -4618,6 +5395,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4640,6 +5420,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4660,6 +5443,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4680,6 +5466,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4702,6 +5491,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4723,6 +5515,9 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4748,8 +5543,11 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -4767,8 +5565,11 @@
           <UserGroups>
             <GroupName>КР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
-          <IsDisabled>false</IsDisabled>
+          <IsDisabled>true</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
           <TimeSavedOneStart>0</TimeSavedOneStart>
@@ -4792,6 +5593,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4812,6 +5616,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4832,6 +5639,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4859,6 +5669,9 @@
           <UserGroups>
             <GroupName>ОВ</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>Serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4883,6 +5696,9 @@
           <HideButtonText>false</HideButtonText>
           <HelpUrl>https://pikipedia.pik.ru/wiki/R4.23_%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD_%D0%B4%D0%BB%D1%8F_%D0%9E%D0%92%D0%9A_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>Serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4910,6 +5726,9 @@
           <UserGroups>
             <GroupName>ОВ</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>Serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4937,6 +5756,9 @@
             <GroupName>ОВ</GroupName>
             <GroupName>ВК</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>Serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4960,6 +5782,9 @@
             <GroupName>ОВ</GroupName>
             <GroupName>ВК</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>Serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -4988,6 +5813,9 @@
             <GroupName>ОВ</GroupName>
             <GroupName>ВК</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>Serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -5015,6 +5843,9 @@
           <UserGroups>
             <GroupName>BIM</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -5043,6 +5874,9 @@
             <GroupName>BIM</GroupName>
             <GroupName>ИРА</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -5069,6 +5903,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -5091,6 +5928,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -5101,6 +5941,32 @@
         </CommandInfo>
       </Commands>
       <AssemblyName>RevitWalls</AssemblyName>
+    </PluginInfo>
+    <PluginInfo>
+      <Commands />
+      <ExternalApp>
+        <Name>ChangeManager</Name>
+        <FullClassName>ChangeManager.App</FullClassName>
+        <Developer>zhekov_fi</Developer>
+        <Description>При синхронизации записывает в базу определенные типы элементов добавленных/измененных в документе.</Description>
+        <ErrorSubscribers>
+          <string>zhekov_fi</string>
+        </ErrorSubscribers>
+      </ExternalApp>
+      <AssemblyName>ChangeManager</AssemblyName>
+    </PluginInfo>
+    <PluginInfo>
+      <Commands />
+      <ExternalApp>
+        <Name>RevitNameValidator</Name>
+        <FullClassName>RevitNameValidator.App</FullClassName>
+        <Developer>zhekov_fi</Developer>
+        <Description>Отслеживает события открытия/закрытия/сохранения/синхронизации документа, записывает в базу, отменяет событие при ошибке в именовании.</Description>
+        <ErrorSubscribers>
+          <string>zhekov_fi</string>
+        </ErrorSubscribers>
+      </ExternalApp>
+      <AssemblyName>RevitNameValidator</AssemblyName>
     </PluginInfo>
     <PluginInfo>
       <Commands>
@@ -5115,6 +5981,9 @@
           <LongDescription>Плагин выполняет проверку отверстий, представленных специальными семействами, по различным условиям. Позволяет производить проверку с ссылочными документами</LongDescription>
           <ToolTip>Проверка проёмов по условиям</ToolTip>
           <UserGroups />
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -5150,6 +6019,9 @@
             <GroupName>BIM</GroupName>
             <GroupName>ИРА</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -5173,12 +6045,16 @@
           <HideButtonText>false</HideButtonText>
           <LongDescription>Выводит сумму длин выбранных линейных элементов (труб, воздуховодов, лотоков, коробов, семейств на основе линии, линий детализации и линий модели)</LongDescription>
           <ToolTip>Выводит сумму длин выбранных линейных элементов</ToolTip>
+          <HelpUrl>https://pikipedia.pik.ru/wiki/R4.29_%D0%A1%D1%83%D0%BC%D0%BC%D0%B0_%D0%B4%D0%BB%D0%B8%D0%BD_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
           <UserGroups>
             <GroupName>ОВ</GroupName>
             <GroupName>ВК</GroupName>
             <GroupName>ЭС</GroupName>
             <GroupName>СС</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -5195,15 +6071,26 @@
         <CommandInfo>
           <Id>219</Id>
           <Code>R1.124</Code>
-          <Developer>zhekov_fi</Developer>
+          <Developer>pekshevaa</Developer>
           <Officer>kurbatov_ms</Officer>
-          <NameRus>Жги!</NameRus>
+          <NameRus>BIM Inspector</NameRus>
           <NameEng>Check</NameEng>
           <HideButtonText>false</HideButtonText>
           <UserGroups>
+            <GroupName>ГП</GroupName>
+            <GroupName>АР</GroupName>
+            <GroupName>КР</GroupName>
+            <GroupName>ОВ</GroupName>
+            <GroupName>ВК</GroupName>
+            <GroupName>ЭС</GroupName>
+            <GroupName>СС</GroupName>
             <GroupName>BIM</GroupName>
+            <GroupName>ИРА</GroupName>
           </UserGroups>
-          <IsTest>true</IsTest>
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
+          <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
           <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
@@ -5211,25 +6098,15 @@
           <CreatedDate>2018-09-10T15:20:44.2330367+03:00</CreatedDate>
           <RatingDate xsi:nil="true" />
         </CommandInfo>
-        <CommandInfo>
-          <Id>220</Id>
-          <Code>R1.125</Code>
-          <Developer>serdjukovis</Developer>
-          <NameRus>Готовь поджог</NameRus>
-          <NameEng>InspectorConfig</NameEng>
-          <HideButtonText>false</HideButtonText>
-          <LongDescription>Настройка проверок</LongDescription>
-          <ToolTip>Настройка проверок</ToolTip>
-          <UserGroups />
-          <IsTest>true</IsTest>
-          <IsDisabled>true</IsDisabled>
-          <IsNoButton>false</IsNoButton>
-          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
-          <TimeSavedOneStart>0</TimeSavedOneStart>
-          <CreatedDate>2018-09-11T16:36:44.588584+03:00</CreatedDate>
-          <RatingDate xsi:nil="true" />
-        </CommandInfo>
       </Commands>
+      <ExternalApp>
+        <Name>BimInspector.Revit</Name>
+        <FullClassName>BimInspector.Revit.App</FullClassName>
+        <Developer>zhekov_fi</Developer>
+        <ErrorSubscribers>
+          <string>zhekov_fi</string>
+        </ErrorSubscribers>
+      </ExternalApp>
       <AssemblyName>BimInspector.Revit</AssemblyName>
     </PluginInfo>
     <PluginInfo>
@@ -5242,6 +6119,8 @@
           <NameRus>Виртуальные*элементы</NameRus>
           <NameEng>VirtualElements</NameEng>
           <HideButtonText>false</HideButtonText>
+          <LongDescription>Добавление виртуальных элементов (элементов без корректных геометрических размеров, положения и зависимостей) в модель для возможности учета в спецификации немоделируемых элементов.</LongDescription>
+          <ToolTip>Учет немоделируемых элементов</ToolTip>
           <UserGroups>
             <GroupName>АР</GroupName>
             <GroupName>КР</GroupName>
@@ -5250,6 +6129,9 @@
             <GroupName>ЭС</GroupName>
             <GroupName>СС</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
           <IsTest>false</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -5266,7 +6148,7 @@
         <CommandInfo>
           <Id>223</Id>
           <Code>R2.44</Code>
-          <Developer>Kuznetsov_AV</Developer>
+          <Developer>pekshevaa</Developer>
           <Officer>malozyomovvv</Officer>
           <NameRus>Рандомная*покраска</NameRus>
           <NameEng>RandomColor</NameEng>
@@ -5274,6 +6156,9 @@
           <UserGroups>
             <GroupName>АР</GroupName>
           </UserGroups>
+          <ErrorSubscribers>
+            <string>Kuznetsov_AV</string>
+          </ErrorSubscribers>
           <IsTest>true</IsTest>
           <IsDisabled>false</IsDisabled>
           <IsNoButton>false</IsNoButton>
@@ -5284,6 +6169,415 @@
         </CommandInfo>
       </Commands>
       <AssemblyName>RevitColoristic</AssemblyName>
+    </PluginInfo>
+    <PluginInfo>
+      <Commands>
+        <CommandInfo>
+          <Id>226</Id>
+          <Code>R2.46</Code>
+          <Developer>pekshevaa</Developer>
+          <Officer>malozyomovvv</Officer>
+          <NameRus>Генератор фасадов</NameRus>
+          <NameEng>FacadeGeneratorR</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <UserGroups>
+            <GroupName>АР</GroupName>
+          </UserGroups>
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
+          <IsTest>true</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>0</TimeSavedOneStart>
+          <CreatedDate>2018-10-12T15:39:50.895867+03:00</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+      </Commands>
+      <AssemblyName>FacadeGeneratorR</AssemblyName>
+    </PluginInfo>
+    <PluginInfo>
+      <Commands>
+        <CommandInfo>
+          <Id>227</Id>
+          <Code>R4.30</Code>
+          <Developer>serdjukovis</Developer>
+          <Officer>ugodinva</Officer>
+          <NameRus>Копировать*параметры</NameRus>
+          <NameEng>Fetch</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <LongDescription>Копирует значения определенных параметров из механического оборудования в электрооборудование</LongDescription>
+          <ToolTip>Копирует значения определенных параметров из механического оборудования в электрооборудование</ToolTip>
+          <UserGroups>
+            <GroupName>ЭС</GroupName>
+            <GroupName>СС</GroupName>
+            <GroupName>BIM</GroupName>
+            <GroupName>ИРА</GroupName>
+          </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
+          <IsTest>false</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>0</TimeSavedOneStart>
+          <CreatedDate>2018-10-19T16:48:20.3386002+03:00</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+        <CommandInfo>
+          <Id>230</Id>
+          <Code>R4.31</Code>
+          <Developer>serdjukovis</Developer>
+          <Officer>ugodinva</Officer>
+          <NameRus>Проверить*параметры</NameRus>
+          <NameEng>Check</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <LongDescription>Проверяет наличие определенных параметров в механическом оборудовании в ссылках</LongDescription>
+          <ToolTip>Проверяет наличие определенных параметров в механическом оборудовании в ссылках</ToolTip>
+          <UserGroups>
+            <GroupName>ЭС</GroupName>
+            <GroupName>СС</GroupName>
+            <GroupName>BIM</GroupName>
+            <GroupName>ИРА</GroupName>
+          </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
+          <IsTest>false</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>0</TimeSavedOneStart>
+          <CreatedDate>2018-11-02T12:40:26.7225189+03:00</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+      </Commands>
+      <AssemblyName>Revit_Fetcher</AssemblyName>
+    </PluginInfo>
+    <PluginInfo>
+      <Commands>
+        <CommandInfo>
+          <Id>229</Id>
+          <Code>R1.128</Code>
+          <Developer>pekshevaa</Developer>
+          <Officer>purtovsy</Officer>
+          <NameRus>Размеры. Сечения стен</NameRus>
+          <NameEng>RebarsOnSectionDimension</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <ToolTip>Плаги для расстановки размеров на сечениях стен с армированием</ToolTip>
+          <UserGroups />
+          <ErrorSubscribers>
+            <string>pekshevaa</string>
+          </ErrorSubscribers>
+          <IsTest>true</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>0</TimeSavedOneStart>
+          <CreatedDate>2018-10-26T14:07:15.6423527+03:00</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+      </Commands>
+      <AssemblyName>RebarsOnSectionDimension</AssemblyName>
+    </PluginInfo>
+    <PluginInfo>
+      <Commands>
+        <CommandInfo>
+          <Id>62</Id>
+          <Code>R3.07</Code>
+          <Developer>zhekov_fi</Developer>
+          <Officer>purtovsy</Officer>
+          <NameRus>Палитра*инструментов</NameRus>
+          <NameEng>ShowPalette</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <ToolTip>Показать/спрятать палитру инструментов</ToolTip>
+          <HelpUrl>https://pikipedia.pik.ru/wiki/R3.07_%D0%9F%D0%B0%D0%BB%D0%B8%D1%82%D1%80%D0%B0_%D0%9A%D0%A0_(%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%B4%D0%BB%D1%8F_Revit)</HelpUrl>
+          <UserGroups />
+          <ErrorSubscribers>
+            <string>zhekov_fi</string>
+          </ErrorSubscribers>
+          <IsTest>true</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>10</TimeSavedOneStart>
+          <Requirements>MongoDB</Requirements>
+          <CreatedDate>2017-04-11T15:15:36.65</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+      </Commands>
+      <AssemblyName>FamilyPalette</AssemblyName>
+    </PluginInfo>
+    <PluginInfo>
+      <Commands>
+        <CommandInfo>
+          <Id>231</Id>
+          <Code>R1.129</Code>
+          <Developer>ostaninam</Developer>
+          <Officer />
+          <NameRus>Экспорт площадки</NameRus>
+          <NameEng>ExportBlockGroup</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <ToolTip>Экспортируется площадка в BDS</ToolTip>
+          <UserGroups>
+            <GroupName>BIM</GroupName>
+            <GroupName>ИРА</GroupName>
+          </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
+          <IsTest>false</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>0</TimeSavedOneStart>
+          <CreatedDate>2018-11-21T11:08:13.2187225+03:00</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+        <CommandInfo>
+          <Id>232</Id>
+          <Code>R1.130</Code>
+          <Developer>ostaninam</Developer>
+          <Officer />
+          <NameRus>Экспорт КФС</NameRus>
+          <NameEng>ExportBlock</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <UserGroups>
+            <GroupName>BIM</GroupName>
+            <GroupName>ИРА</GroupName>
+          </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
+          <IsTest>false</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>0</TimeSavedOneStart>
+          <CreatedDate>2018-11-21T11:09:21.6582468+03:00</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+        <CommandInfo>
+          <Id>65</Id>
+          <Code>R1.34</Code>
+          <Developer>ostaninam</Developer>
+          <Officer />
+          <NameRus>BDS параметризация</NameRus>
+          <NameEng>BdsParametrization</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <HelpUrl />
+          <UserGroups>
+            <GroupName>BIM</GroupName>
+          </UserGroups>
+          <ErrorSubscribers>
+            <string>ostaninam</string>
+          </ErrorSubscribers>
+          <IsTest>false</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>15</TimeSavedOneStart>
+          <CreatedDate>2017-04-18T11:48:28.303</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+      </Commands>
+      <AssemblyName>BDSRevit</AssemblyName>
+    </PluginInfo>
+    <PluginInfo>
+      <Commands>
+        <CommandInfo>
+          <Id>233</Id>
+          <Code>R1.131</Code>
+          <Developer>ostaninam</Developer>
+          <Officer>krivoysa</Officer>
+          <NameRus>Заполнить*по СНАП</NameRus>
+          <NameEng>RevitSnap</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <LongDescription>Получает(обновляет) артикулы СНАП для семейств и заносит их в параметры "СНАП_Имя", "СНАП_GUID", "СНАП_Единицы", "СНАП_Количество", "СНАП_Точность"</LongDescription>
+          <ToolTip>Получает(обновляет) артикулы СНАП для семейств и заносит их в параметры </ToolTip>
+          <UserGroups>
+            <GroupName>BIM</GroupName>
+            <GroupName>ИРА</GroupName>
+          </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
+          <IsTest>true</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>0</TimeSavedOneStart>
+          <CreatedDate>2018-12-13T10:48:19.7027536+03:00</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+      </Commands>
+      <AssemblyName>FamilyManagerRevitSnap</AssemblyName>
+    </PluginInfo>
+    <PluginInfo>
+      <Commands>
+        <CommandInfo>
+          <Id>234</Id>
+          <Code>R1.132</Code>
+          <Developer>serdjukovis</Developer>
+          <Officer>krivoysa</Officer>
+          <NameRus>Склеить*параметры</NameRus>
+          <NameEng>Specification</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <LongDescription>Позволяет вычислить и вписать значение параметра эелмента на основе значений других параметров элемента по формуле, задаваемой самостоятельно в файле Excel</LongDescription>
+          <ToolTip>Заполняет значения параметров по формулам из Excel</ToolTip>
+          <UserGroups>
+            <GroupName>ГП</GroupName>
+            <GroupName>КР</GroupName>
+            <GroupName>ОВ</GroupName>
+            <GroupName>ВК</GroupName>
+            <GroupName>ЭС</GroupName>
+            <GroupName>СС</GroupName>
+            <GroupName>BIM</GroupName>
+            <GroupName>ИРА</GroupName>
+          </UserGroups>
+          <ErrorSubscribers>
+            <string>serdjukovis</string>
+          </ErrorSubscribers>
+          <IsTest>false</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>0</TimeSavedOneStart>
+          <CreatedDate>2018-12-24T17:10:55.5029636+03:00</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+      </Commands>
+      <AssemblyName>Revit_Specification</AssemblyName>
+    </PluginInfo>
+    <PluginInfo>
+      <Commands>
+        <CommandInfo>
+          <Id>236</Id>
+          <Code>R1.133</Code>
+          <Developer>pekshevaa</Developer>
+          <Officer>kurbatov_ms</Officer>
+          <NameRus>BS_Блок в BDS_BuildingPart</NameRus>
+          <NameEng>BDSBuildingPartWriter</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <ToolTip>Запись значений из параметра BS_Блок в параметр BDS_BuildingPart с корректировкой значений</ToolTip>
+          <UserGroups />
+          <ErrorSubscribers />
+          <IsTest>false</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>0</TimeSavedOneStart>
+          <CreatedDate>2019-01-25T09:32:42.7592802+03:00</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+      </Commands>
+      <AssemblyName>BDSBuildingPartWriter</AssemblyName>
+    </PluginInfo>
+    <PluginInfo>
+      <Commands>
+        <CommandInfo>
+          <Id>237</Id>
+          <Code>R1.134</Code>
+          <Developer>pekshevaa</Developer>
+          <Officer>krivoysa</Officer>
+          <NameRus>Назначение параметра BDS_BuildingPart</NameRus>
+          <NameEng>BDS_BuildingPart_Fill</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <ToolTip>Назначение параметра BDS_BuildingPart для элементов, расположенных внутри формообразующих. Формообразующие должны располагаться в связанном файле КФС. Значение берется из параметра BS_Номер формообразующей</ToolTip>
+          <UserGroups />
+          <ErrorSubscribers />
+          <IsTest>false</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>0</TimeSavedOneStart>
+          <CreatedDate>2019-01-31T16:01:00.7942188+03:00</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+        <CommandInfo>
+          <Id>241</Id>
+          <Code>R1.138</Code>
+          <Developer>pekshevaa</Developer>
+          <Officer>kurbatov_ms</Officer>
+          <NameRus>Трасфер параметров</NameRus>
+          <NameEng>ParameterTransfer</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <ToolTip>Перенос значений между параметрами по данным из выбранного excel файла</ToolTip>
+          <UserGroups />
+          <ErrorSubscribers />
+          <IsTest>false</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>0</TimeSavedOneStart>
+          <CreatedDate>2019-03-29T15:49:22.5419428+03:00</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+      </Commands>
+      <AssemblyName>DataPreparer</AssemblyName>
+    </PluginInfo>
+    <PluginInfo>
+      <Commands>
+        <CommandInfo>
+          <Id>240</Id>
+          <Code>R1.137</Code>
+          <Developer>ugodinva</Developer>
+          <Officer>mylovdp</Officer>
+          <NameRus>Раскраска помещений ДДУ</NameRus>
+          <NameEng>ArDduView</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <ToolTip>Присваивает значение "Полутон" для последующих квартир с одинаковым количеством комнат</ToolTip>
+          <UserGroups>
+            <GroupName>АР</GroupName>
+          </UserGroups>
+          <ErrorSubscribers />
+          <IsTest>false</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>0</TimeSavedOneStart>
+          <CreatedDate>2019-03-05T10:52:53.2521538+03:00</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+      </Commands>
+      <AssemblyName>Revit_ArDduView</AssemblyName>
+    </PluginInfo>
+    <PluginInfo>
+      <Commands />
+      <ExternalApp>
+        <Name>RevitLogProjectLocation</Name>
+        <FullClassName>RevitLogProjectLocation.ApplicationLog</FullClassName>
+        <Developer>malozyomovvv</Developer>
+        <Description>Записывает в БД данные о изменении площадок с общими координатами</Description>
+        <ErrorSubscribers />
+      </ExternalApp>
+      <AssemblyName>RevitLogProjectLocation</AssemblyName>
+    </PluginInfo>
+    <PluginInfo>
+      <Commands>
+        <CommandInfo>
+          <Id>242</Id>
+          <Code>R3.34</Code>
+          <Developer>pekshevaa</Developer>
+          <Officer>purtovsy</Officer>
+          <NameRus>Подъем панелей</NameRus>
+          <NameEng>ExtrudePanels</NameEng>
+          <HideButtonText>false</HideButtonText>
+          <ToolTip>Команда строит панели (создавая семейства) по данным из БД "Панели"</ToolTip>
+          <UserGroups />
+          <ErrorSubscribers />
+          <IsTest>true</IsTest>
+          <IsDisabled>false</IsDisabled>
+          <IsNoButton>false</IsNoButton>
+          <AvailabilityWithoutDoc>false</AvailabilityWithoutDoc>
+          <TimeSavedOneStart>0</TimeSavedOneStart>
+          <CreatedDate>2019-05-08T11:04:19.4775344+03:00</CreatedDate>
+          <RatingDate xsi:nil="true" />
+        </CommandInfo>
+      </Commands>
+      <AssemblyName>RevitPrecast</AssemblyName>
     </PluginInfo>
   </Plugins>
   <Menu>
@@ -5311,17 +6605,17 @@
               </ButtonBase>
               <ButtonBase xsi:type="Button">
                 <CommandsId>
-                  <ID>74</ID>
-                </CommandsId>
-              </ButtonBase>
-              <ButtonBase xsi:type="Button">
-                <CommandsId>
                   <ID>5</ID>
                 </CommandsId>
               </ButtonBase>
               <ButtonBase xsi:type="Button">
                 <CommandsId>
                   <ID>55</ID>
+                </CommandsId>
+              </ButtonBase>
+              <ButtonBase xsi:type="Button">
+                <CommandsId>
+                  <ID>234</ID>
                 </CommandsId>
               </ButtonBase>
               <ButtonBase xsi:type="Button">
@@ -5341,18 +6635,16 @@
               </ButtonBase>
               <ButtonBase xsi:type="Button">
                 <CommandsId>
-                  <ID>218</ID>
+                  <ID>219</ID>
                 </CommandsId>
               </ButtonBase>
               <ButtonBase xsi:type="StackButtons">
                 <CommandsId>
                   <ID>7</ID>
-                  <ID>129</ID>
                 </CommandsId>
               </ButtonBase>
               <ButtonBase xsi:type="StackButtons">
                 <CommandsId>
-                  <ID>88</ID>
                   <ID>109</ID>
                   <ID>50</ID>
                 </CommandsId>
@@ -5362,6 +6654,13 @@
           <Panel>
             <Name>Обновление данных</Name>
             <Buttons>
+              <ButtonBase xsi:type="StackButtons">
+                <CommandsId>
+                  <ID>142</ID>
+                  <ID>80</ID>
+                  <ID>225</ID>
+                </CommandsId>
+              </ButtonBase>
               <ButtonBase xsi:type="Button">
                 <CommandsId>
                   <ID>172</ID>
@@ -5382,10 +6681,12 @@
                   <ID>32</ID>
                 </CommandsId>
               </ButtonBase>
+              <ButtonBase xsi:type="SlideOutButton" />
               <ButtonBase xsi:type="StackButtons">
                 <CommandsId>
-                  <ID>142</ID>
-                  <ID>80</ID>
+                  <ID>237</ID>
+                  <ID>236</ID>
+                  <ID>241</ID>
                 </CommandsId>
               </ButtonBase>
             </Buttons>
@@ -5465,6 +6766,7 @@
                   <ID>214</ID>
                   <ID>215</ID>
                   <ID>119</ID>
+                  <ID>224</ID>
                 </CommandsId>
               </ButtonBase>
               <ButtonBase xsi:type="Button">
@@ -5473,6 +6775,12 @@
                   <ID>66</ID>
                   <ID>67</ID>
                   <ID>39</ID>
+                </CommandsId>
+              </ButtonBase>
+              <ButtonBase xsi:type="SlideOutButton" />
+              <ButtonBase xsi:type="StackButtons">
+                <CommandsId>
+                  <ID>240</ID>
                 </CommandsId>
               </ButtonBase>
             </Buttons>
@@ -5501,11 +6809,6 @@
             <Buttons>
               <ButtonBase xsi:type="StackButtons">
                 <CommandsId>
-                  <ID>99</ID>
-                </CommandsId>
-              </ButtonBase>
-              <ButtonBase xsi:type="StackButtons">
-                <CommandsId>
                   <ID>21</ID>
                   <ID>24</ID>
                   <ID>46</ID>
@@ -5519,14 +6822,7 @@
               <ButtonBase xsi:type="StackButtons">
                 <CommandsId>
                   <ID>98</ID>
-                  <ID>123</ID>
                   <ID>157</ID>
-                </CommandsId>
-              </ButtonBase>
-              <ButtonBase xsi:type="Button">
-                <CommandsId>
-                  <ID>155</ID>
-                  <ID>158</ID>
                 </CommandsId>
               </ButtonBase>
               <ButtonBase xsi:type="Button">
@@ -5548,8 +6844,6 @@
             <Buttons>
               <ButtonBase xsi:type="Button">
                 <CommandsId>
-                  <ID>145</ID>
-                  <ID>146</ID>
                   <ID>211</ID>
                 </CommandsId>
               </ButtonBase>
@@ -5570,40 +6864,7 @@
             <Buttons>
               <ButtonBase xsi:type="Button">
                 <CommandsId>
-                  <ID>115</ID>
-                  <ID>116</ID>
-                  <ID>118</ID>
-                  <ID>120</ID>
-                </CommandsId>
-              </ButtonBase>
-              <ButtonBase xsi:type="Button">
-                <CommandsId>
-                  <ID>35</ID>
-                </CommandsId>
-              </ButtonBase>
-              <ButtonBase xsi:type="Button">
-                <CommandsId>
                   <ID>8</ID>
-                </CommandsId>
-              </ButtonBase>
-              <ButtonBase xsi:type="Button">
-                <CommandsId>
-                  <ID>101</ID>
-                </CommandsId>
-              </ButtonBase>
-              <ButtonBase xsi:type="Button">
-                <CommandsId>
-                  <ID>111</ID>
-                </CommandsId>
-              </ButtonBase>
-              <ButtonBase xsi:type="Button">
-                <CommandsId>
-                  <ID>121</ID>
-                </CommandsId>
-              </ButtonBase>
-              <ButtonBase xsi:type="Button">
-                <CommandsId>
-                  <ID>62</ID>
                 </CommandsId>
               </ButtonBase>
               <ButtonBase xsi:type="Button">
@@ -5613,8 +6874,7 @@
               </ButtonBase>
               <ButtonBase xsi:type="Button">
                 <CommandsId>
-                  <ID>194</ID>
-                  <ID>193</ID>
+                  <ID>239</ID>
                 </CommandsId>
               </ButtonBase>
             </Buttons>
@@ -5640,11 +6900,6 @@
               </ButtonBase>
               <ButtonBase xsi:type="Button">
                 <CommandsId>
-                  <ID>152</ID>
-                </CommandsId>
-              </ButtonBase>
-              <ButtonBase xsi:type="Button">
-                <CommandsId>
                   <ID>168</ID>
                 </CommandsId>
               </ButtonBase>
@@ -5658,37 +6913,6 @@
                   <ID>144</ID>
                 </CommandsId>
               </ButtonBase>
-              <ButtonBase xsi:type="Button">
-                <CommandsId>
-                  <ID>127</ID>
-                </CommandsId>
-              </ButtonBase>
-              <ButtonBase xsi:type="Button">
-                <CommandsId>
-                  <ID>167</ID>
-                </CommandsId>
-              </ButtonBase>
-              <ButtonBase xsi:type="Button">
-                <CommandsId>
-                  <ID>174</ID>
-                </CommandsId>
-              </ButtonBase>
-              <ButtonBase xsi:type="Button">
-                <CommandsId>
-                  <ID>177</ID>
-                </CommandsId>
-              </ButtonBase>
-            </Buttons>
-          </Panel>
-          <Panel>
-            <Name>Размеры</Name>
-            <Buttons>
-              <ButtonBase xsi:type="Button">
-                <CommandsId>
-                  <ID>188</ID>
-                  <ID>189</ID>
-                </CommandsId>
-              </ButtonBase>
             </Buttons>
           </Panel>
         </Panels>
@@ -5697,43 +6921,57 @@
         <Name>ПИК-ИОС</Name>
         <Panels>
           <Panel>
-            <Name>ИОС</Name>
+            <Name>Общие</Name>
             <Buttons>
               <ButtonBase xsi:type="Button">
                 <CommandsId>
-                  <ID>221</ID>
+                  <ID>37</ID>
                 </CommandsId>
               </ButtonBase>
               <ButtonBase xsi:type="Button">
                 <CommandsId>
-                  <ID>187</ID>
-                </CommandsId>
-              </ButtonBase>
-              <ButtonBase xsi:type="StackButtons">
-                <CommandsId>
-                  <ID>202</ID>
-                  <ID>203</ID>
-                </CommandsId>
-              </ButtonBase>
-              <ButtonBase xsi:type="StackButtons">
-                <CommandsId>
-                  <ID>204</ID>
-                  <ID>201</ID>
+                  <ID>36</ID>
                 </CommandsId>
               </ButtonBase>
               <ButtonBase xsi:type="Button">
                 <CommandsId>
+                  <ID>238</ID>
+                </CommandsId>
+              </ButtonBase>
+              <ButtonBase xsi:type="Button">
+                <CommandsId>
+                  <ID>208</ID>
+                </CommandsId>
+              </ButtonBase>
+              <ButtonBase xsi:type="StackButtons">
+                <CommandsId>
+                  <ID>180</ID>
+                  <ID>218</ID>
                   <ID>199</ID>
                 </CommandsId>
               </ButtonBase>
               <ButtonBase xsi:type="Button">
                 <CommandsId>
+                  <ID>137</ID>
+                  <ID>38</ID>
                   <ID>191</ID>
+                </CommandsId>
+              </ButtonBase>
+            </Buttons>
+          </Panel>
+          <Panel>
+            <Name>ОВ и ВК</Name>
+            <Buttons>
+              <ButtonBase xsi:type="Button">
+                <CommandsId>
+                  <ID>202</ID>
+                  <ID>203</ID>
                 </CommandsId>
               </ButtonBase>
               <ButtonBase xsi:type="Button">
                 <CommandsId>
-                  <ID>180</ID>
+                  <ID>204</ID>
+                  <ID>201</ID>
                 </CommandsId>
               </ButtonBase>
               <ButtonBase xsi:type="Button">
@@ -5790,42 +7028,27 @@
               </ButtonBase>
               <ButtonBase xsi:type="Button">
                 <CommandsId>
-                  <ID>137</ID>
+                  <ID>187</ID>
                 </CommandsId>
               </ButtonBase>
               <ButtonBase xsi:type="Button">
                 <CommandsId>
-                  <ID>38</ID>
+                  <ID>221</ID>
+                </CommandsId>
+              </ButtonBase>
+            </Buttons>
+          </Panel>
+          <Panel>
+            <Name>ЭОМ</Name>
+            <Buttons>
+              <ButtonBase xsi:type="Button">
+                <CommandsId>
+                  <ID>230</ID>
                 </CommandsId>
               </ButtonBase>
               <ButtonBase xsi:type="Button">
                 <CommandsId>
-                  <ID>208</ID>
-                </CommandsId>
-              </ButtonBase>
-              <ButtonBase xsi:type="Button">
-                <CommandsId>
-                  <ID>79</ID>
-                </CommandsId>
-              </ButtonBase>
-              <ButtonBase xsi:type="Button">
-                <CommandsId>
-                  <ID>102</ID>
-                </CommandsId>
-              </ButtonBase>
-              <ButtonBase xsi:type="Button">
-                <CommandsId>
-                  <ID>133</ID>
-                </CommandsId>
-              </ButtonBase>
-              <ButtonBase xsi:type="Button">
-                <CommandsId>
-                  <ID>37</ID>
-                </CommandsId>
-              </ButtonBase>
-              <ButtonBase xsi:type="Button">
-                <CommandsId>
-                  <ID>36</ID>
+                  <ID>227</ID>
                 </CommandsId>
               </ButtonBase>
             </Buttons>
@@ -5855,18 +7078,11 @@
               </ButtonBase>
               <ButtonBase xsi:type="Button">
                 <CommandsId>
-                  <ID>64</ID>
-                  <ID>65</ID>
-                </CommandsId>
-              </ButtonBase>
-              <ButtonBase xsi:type="Button">
-                <CommandsId>
                   <ID>82</ID>
                 </CommandsId>
               </ButtonBase>
               <ButtonBase xsi:type="Button">
                 <CommandsId>
-                  <ID>41</ID>
                   <ID>42</ID>
                 </CommandsId>
               </ButtonBase>
@@ -5902,7 +7118,19 @@
               </ButtonBase>
               <ButtonBase xsi:type="Button">
                 <CommandsId>
+                  <ID>228</ID>
+                </CommandsId>
+              </ButtonBase>
+              <ButtonBase xsi:type="Button">
+                <CommandsId>
                   <ID>207</ID>
+                </CommandsId>
+              </ButtonBase>
+              <ButtonBase xsi:type="Button">
+                <CommandsId>
+                  <ID>231</ID>
+                  <ID>232</ID>
+                  <ID>65</ID>
                 </CommandsId>
               </ButtonBase>
             </Buttons>
@@ -5993,483 +7221,480 @@
     <UserInfo>
       <FIO>Фоминых Анастасия Ильинична</FIO>
       <Login>fominyh_ai</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Ганза Руслан Алексеевич</FIO>
       <Login>ganzara</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Хисяметдинов Вильдар Тямильевич</FIO>
       <Login>Khisyametdinovvt</Login>
+      <TelegramUserName>@vildarkh</TelegramUserName>
+      <TelegramId>195146741</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Останин Антон Михайлович</FIO>
       <Login>ostaninam</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Пекшев Александр Александрович</FIO>
       <Login>pekshevaa</Login>
+      <TelegramUserName>@Pekshev</TelegramUserName>
+      <TelegramId>443638433</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Попов Александр Витальевич</FIO>
       <Login>popov_av</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Сердюков Игорь Станиславович</FIO>
       <Login>serdjukovis</Login>
+      <TelegramUserName>@WhiteSharx</TelegramUserName>
+      <TelegramId>235546981</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Жеков Федор Игоревич</FIO>
       <Login>zhekov_fi</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Журавлев Михаил Алексеевич</FIO>
       <Login>zhuravlevma</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Баширов Ахмад Лечиевич</FIO>
       <Login>bashiroval</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Баймуратов Исмет Замирович</FIO>
       <Login>baymuratoviz</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Чикин Вячеслав Александрович</FIO>
       <Login>chikinva</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Чугреев Алексей Анатольевич</FIO>
       <Login>chugreevaa</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Дадонов Евгений Львович</FIO>
       <Login>dadonovel</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Гладков Иван Николаевич</FIO>
       <Login>gladkovin</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Гринчук Кристина Дмитриевна</FIO>
       <Login>grinchukkd</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Гришин Александр Николаевич</FIO>
       <Login>grishinan</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Карпанов Алексей Алексеевич</FIO>
       <Login>karpanovaa</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Койнов Сергей Александрович</FIO>
       <Login>koynovsa</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Козлов Михаил Александрович</FIO>
       <Login>kozlovma</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Кривой Сергей Александрович</FIO>
       <Login>krivoysa</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Курбатов Максим Сергеевич</FIO>
       <Login>kurbatov_ms</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Малозёмов Виталий Владимирович</FIO>
       <Login>malozyomovvv</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Наумова Ирина Викторовна</FIO>
       <Login>naumovaiv</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Прудников Владимир Сергеевич</FIO>
       <Login>prudnikovvs</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Пуртов Станислав Юрьевич</FIO>
       <Login>purtovsy</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Роль Алексей Александрович</FIO>
       <Login>rolaa</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Самойлов Александр Николаевич</FIO>
       <Login>samoilov_an</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Самойлов Александр Николаевич</FIO>
       <Login>samojlov_an</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Штылев Дмитрий Владимирович</FIO>
       <Login>shtylevdv</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Степкин Алексей Николаевич</FIO>
       <Login>stepkinan</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Цивилев Александр Владиславович</FIO>
       <Login>Tsivilevav</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Угодин Виктор Анатольевич</FIO>
       <Login>ugodinva</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Варламов Алексей Андреевич</FIO>
       <Login>varlamovaa</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Веселова Ксения Андреевна</FIO>
       <Login>Veselovaka</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Вильчинская Олеся Владиславовна</FIO>
       <Login>VILCHINSKAYAOV</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Врублевский Борис Александрович</FIO>
       <Login>vrublevskiyba</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Захарова Надежда Вениаминовна</FIO>
       <Login>zakharovanv</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Зарубин Евгений Игоревич</FIO>
       <Login>zarubinei</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Жогла Александр Владимирович</FIO>
       <Login>zhoglaav</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Басов Владимир Дмитриевич</FIO>
       <Login>BasovVD</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Ерошкин Максим Александрович</FIO>
       <Login>eroshkinma</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Цивилев Александр Владиславович</FIO>
       <Login>tsivilevav</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Хисяметдинов Вильдар Тямильевич</FIO>
       <Login>khisyametdinovvt</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>bim.user</FIO>
       <Login>bim.user</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Данильчук Анастасия Ярославна</FIO>
       <Login>danilchukaia</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Зуев Александр</FIO>
       <Login>zueva</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Бадекина Екатерина Сергеевна</FIO>
       <Login>badekinaes</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Картышов Сергей Иванович</FIO>
       <Login>kartyshovsi</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Тотаев Антон Юрьевич</FIO>
       <Login>tau</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Фельдштейн Алексей Александрович</FIO>
       <Login>feldshteynaa</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Мылов Дмитрий Петрович</FIO>
       <Login>mylovdp</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
     <UserInfo>
       <FIO>Кузнецов Александр Владимирович</FIO>
       <Login>Kuznetsov_AV</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Хисяметдинов Вильдар Тямильевич</FIO>
+      <Login>KhisyametdinovVT</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Козлов Станислав Борисович</FIO>
+      <Login>kozlovsb</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Игонькина Юлия Валерьевна</FIO>
+      <Login>igonkinaiuv</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Ишмаев Артур Рамилевич</FIO>
+      <Login>ishmaevar</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Бебякин Борис Олегович</FIO>
+      <Login>bebiakinbo</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Кузикян Сергей Гарикович</FIO>
+      <Login>kuzikiansg</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Охапкина Анастасия Игоревна</FIO>
+      <Login>okhapkinaai</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Панасенко Андрей Геннадьевич</FIO>
+      <Login>panasenkoag</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Чеховской Виктор Владимирович</FIO>
+      <Login>Chekhovskoyvv</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Горшков Семен Валерьевич</FIO>
+      <Login>gorshkovsv</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Москвина Екатерина Леонидовна</FIO>
+      <Login>moskvinael</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Пальмов Семен Борисович</FIO>
+      <Login>palmovsb</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Романов Иван Александрович</FIO>
+      <Login>romanov_ia</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Карпова Полина Витальевна</FIO>
+      <Login>Karpovapv</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Назаров Дмитрий Евгеньевич</FIO>
+      <Login>nazarovde</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Сологубов Дмитрий Викторович</FIO>
+      <Login>sologubovdv</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Сухов Павел Аркадьевич</FIO>
+      <Login>sukhovpa</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Шихалиев Марат Сираджеддинович</FIO>
+      <Login>shikhalievms</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Угодин Александр Анатольевич</FIO>
+      <Login>ugodinaa</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Инкин Леонид Иванович</FIO>
+      <Login>inkin_li</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Жеков Федор Игоревич</FIO>
+      <Login>zhekovfi</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Авдеев Игорь Михайлович</FIO>
+      <Login>avdeevim</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Базалук Максим Александрович</FIO>
+      <Login>bazalukma</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Никифоров Никита Сергеевич</FIO>
+      <Login>nikiforovns</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Системный администратор</FIO>
+      <Login>sys.admin</Login>
+      <TelegramId>0</TelegramId>
+      <DateRegistration>0001-01-01T00:00:00</DateRegistration>
+    </UserInfo>
+    <UserInfo>
+      <FIO>Сологубов Дмитрий Викторович</FIO>
+      <Login>Sologubovdv</Login>
+      <TelegramId>0</TelegramId>
       <DateRegistration>0001-01-01T00:00:00</DateRegistration>
     </UserInfo>
   </Users>
-  <Products>
-    <Product>
-      <Name>Инструменты Общие для Revit</Name>
-      <CommandIds>
-        <int>1</int>
-        <int>2</int>
-        <int>3</int>
-        <int>4</int>
-        <int>5</int>
-        <int>6</int>
-        <int>7</int>
-        <int>8</int>
-        <int>9</int>
-        <int>10</int>
-        <int>11</int>
-        <int>12</int>
-        <int>13</int>
-        <int>14</int>
-        <int>20</int>
-        <int>39</int>
-        <int>40</int>
-        <int>41</int>
-        <int>42</int>
-        <int>47</int>
-        <int>48</int>
-        <int>49</int>
-        <int>50</int>
-        <int>51</int>
-        <int>54</int>
-        <int>55</int>
-        <int>57</int>
-        <int>59</int>
-        <int>61</int>
-        <int>63</int>
-        <int>64</int>
-        <int>65</int>
-        <int>69</int>
-        <int>73</int>
-        <int>74</int>
-        <int>75</int>
-        <int>77</int>
-        <int>78</int>
-        <int>79</int>
-        <int>80</int>
-        <int>81</int>
-        <int>82</int>
-        <int>83</int>
-        <int>84</int>
-        <int>85</int>
-        <int>86</int>
-        <int>87</int>
-        <int>88</int>
-        <int>90</int>
-        <int>92</int>
-        <int>95</int>
-        <int>99</int>
-        <int>109</int>
-        <int>110</int>
-        <int>114</int>
-        <int>115</int>
-        <int>116</int>
-        <int>117</int>
-        <int>118</int>
-        <int>119</int>
-        <int>120</int>
-        <int>123</int>
-        <int>126</int>
-        <int>128</int>
-        <int>129</int>
-        <int>130</int>
-        <int>131</int>
-        <int>132</int>
-        <int>134</int>
-        <int>135</int>
-        <int>138</int>
-        <int>139</int>
-        <int>140</int>
-        <int>142</int>
-        <int>143</int>
-        <int>147</int>
-        <int>148</int>
-        <int>149</int>
-        <int>153</int>
-        <int>154</int>
-        <int>157</int>
-        <int>160</int>
-        <int>161</int>
-        <int>162</int>
-        <int>164</int>
-        <int>165</int>
-        <int>166</int>
-        <int>167</int>
-        <int>169</int>
-        <int>170</int>
-        <int>171</int>
-        <int>172</int>
-        <int>173</int>
-        <int>174</int>
-        <int>175</int>
-        <int>176</int>
-        <int>178</int>
-        <int>179</int>
-        <int>180</int>
-        <int>181</int>
-        <int>183</int>
-        <int>184</int>
-        <int>187</int>
-        <int>188</int>
-        <int>189</int>
-        <int>190</int>
-        <int>191</int>
-      </CommandIds>
-      <ChangeLog />
-    </Product>
-    <Product>
-      <Name>Инструменты АР для Revit</Name>
-      <CommandIds>
-        <int>15</int>
-        <int>16</int>
-        <int>17</int>
-        <int>18</int>
-        <int>19</int>
-        <int>21</int>
-        <int>22</int>
-        <int>23</int>
-        <int>24</int>
-        <int>25</int>
-        <int>26</int>
-        <int>27</int>
-        <int>28</int>
-        <int>29</int>
-        <int>30</int>
-        <int>31</int>
-        <int>32</int>
-        <int>44</int>
-        <int>46</int>
-        <int>66</int>
-        <int>67</int>
-        <int>68</int>
-        <int>76</int>
-        <int>89</int>
-        <int>93</int>
-        <int>94</int>
-        <int>96</int>
-        <int>98</int>
-        <int>100</int>
-        <int>106</int>
-        <int>112</int>
-        <int>113</int>
-        <int>141</int>
-        <int>145</int>
-        <int>146</int>
-        <int>155</int>
-        <int>158</int>
-      </CommandIds>
-      <ChangeLog />
-    </Product>
-    <Product>
-      <Name>Инструменты КР для Revit</Name>
-      <CommandIds>
-        <int>33</int>
-        <int>34</int>
-        <int>35</int>
-        <int>53</int>
-        <int>56</int>
-        <int>60</int>
-        <int>62</int>
-        <int>70</int>
-        <int>72</int>
-        <int>101</int>
-        <int>103</int>
-        <int>104</int>
-        <int>105</int>
-        <int>107</int>
-        <int>108</int>
-        <int>111</int>
-        <int>121</int>
-        <int>127</int>
-        <int>144</int>
-        <int>150</int>
-        <int>152</int>
-        <int>156</int>
-        <int>163</int>
-        <int>168</int>
-        <int>177</int>
-        <int>192</int>
-      </CommandIds>
-      <ChangeLog />
-    </Product>
-    <Product>
-      <Name>Инструменты ИОС для Revit</Name>
-      <CommandIds>
-        <int>36</int>
-        <int>37</int>
-        <int>38</int>
-        <int>52</int>
-        <int>58</int>
-        <int>71</int>
-        <int>91</int>
-        <int>97</int>
-        <int>102</int>
-        <int>122</int>
-        <int>124</int>
-        <int>125</int>
-        <int>133</int>
-        <int>136</int>
-        <int>137</int>
-        <int>151</int>
-        <int>159</int>
-        <int>182</int>
-        <int>185</int>
-        <int>186</int>
-      </CommandIds>
-      <ChangeLog />
-    </Product>
-  </Products>
+  <Products />
 </PluginConfig>
