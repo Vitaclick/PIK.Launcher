@@ -173,7 +173,29 @@ namespace PIK.Launcher
     }
     private void InstallAssembler(List<object> args)
     {
-      throw new NotImplementedException();
+      var SourcePath = @"\\picompany.ru\pikp\Dep\IT\_SR_Public\01_BIM\10_Development\RevitPlugins\2017";
+      var DestinationPath = Path.Combine(userAppdataFolderPath, @"Autodesk\Revit\Addins\2017");
+      foreach (string dirPath in Directory.GetDirectories(SourcePath, "*", 
+        SearchOption.AllDirectories))
+        Directory.CreateDirectory(dirPath.Replace(SourcePath, DestinationPath));
+
+      //Copy all the files & Replaces any files with the same name
+      foreach (string newPath in Directory.GetFiles(SourcePath, "*.*", 
+        SearchOption.AllDirectories))
+        File.Copy(newPath, newPath.Replace(SourcePath, DestinationPath), true);
+
+
+      var SourcePath2019 = @"\\picompany.ru\pikp\Dep\IT\_SR_Public\01_BIM\10_Development\RevitPlugins\2019";
+      var DestinationPath2019 = Path.Combine(userAppdataFolderPath, @"Autodesk\Revit\Addins\2019");
+      foreach (string dirPath in Directory.GetDirectories(SourcePath2019 , "*", 
+        SearchOption.AllDirectories))
+        Directory.CreateDirectory(dirPath.Replace(SourcePath2019 , DestinationPath2019 ));
+
+      //Copy all the files & Replaces any files with the same name
+      foreach (string newPath in Directory.GetFiles(SourcePath2019 , "*.*", 
+        SearchOption.AllDirectories))
+        File.Copy(newPath, newPath.Replace(SourcePath2019 , DestinationPath2019 ), true);
+
     }
   }
 }
