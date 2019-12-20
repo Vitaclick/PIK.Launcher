@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using static System.Console;
 
 namespace PIK.Launcher
 {
@@ -16,11 +17,15 @@ namespace PIK.Launcher
     public void MoveDown() => SelectedIndex = Math.Min(SelectedIndex + 1, Items.Count - 1);
     public void Select()
     {
-      var selection = Items[SelectedIndex];
-      if (!SelectedItems.Contains(selection))
-        SelectedItems.Add(selection);
-      else
-        SelectedItems.Remove(selection);
+      // skip empty selection
+      if (SelectedIndex != -1)
+      {
+        var selection = Items[SelectedIndex];
+        if (!SelectedItems.Contains(selection))
+          SelectedItems.Add(selection);
+        else
+          SelectedItems.Remove(selection);
+      }
     }
     //public Menu(Dictionary<string, Settings.ConfigHandler> items)
     //{
@@ -38,7 +43,7 @@ namespace PIK.Launcher
       do
       {
         menuPainter.Paint(1, verticalOffset);
-        var keyInfo = Console.ReadKey();
+        var keyInfo = ReadKey();
 
         switch (keyInfo.Key)
         {
@@ -57,15 +62,17 @@ namespace PIK.Launcher
 
     public static bool PromptYesNo(string message)
     {
-      Console.Write($"{message} (y/n):");
+      Write($"{message} (y/n):");
       do
       {
-        var answer = Console.ReadLine();
-        switch (answer)
+        var answer = ReadKey(true);
+        switch (answer.Key)
         {
-          case "y":
+          case ConsoleKey.Y:
             return true;
-          case "n":
+          case ConsoleKey.N:
+            return false;
+          case ConsoleKey.Escape:
             return false;
         }
       } while (true);
@@ -83,12 +90,12 @@ namespace PIK.Launcher
     {
       for (int i = 0; i < menu.Items.Count; i++)
       {
-        Console.SetCursorPosition(x, y + i);
+        SetCursorPosition(x, y + i);
         var color = menu.SelectedIndex == i ? ConsoleColor.Yellow : ConsoleColor.Gray;
 
-        Console.ForegroundColor = color;
+        ForegroundColor = color;
         var item = menu.Items[i];
-        System.Console.WriteLine(menu.SelectedItems.Contains(item) ? "[x] " : "[ ] " + menu.Items[i]);
+        WriteLine(menu.SelectedItems.Contains(item) ? "[x] " : "[ ] " + menu.Items[i]);
       }
     }
   }
